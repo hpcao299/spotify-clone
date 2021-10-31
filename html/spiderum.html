@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/assets/css/grid.css">
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/music-playlist.css">
+    <link rel="stylesheet" href="/assets/css/podcast.css">
     <link rel="stylesheet" href="/assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="/assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="/assets/image/spotify-website-logo.png"> -->
@@ -116,25 +117,221 @@
             </div>
         </div>
 
+        <!-- Content -->
+        <div id="content">
+            <!-- Content Header -->
+            <div class="content__gradient"></div>
+            <div class="content__gradient-bonus"></div>
+            <header class="content__header"></header>
+            <nav class="header__nav">
+                <div class="header__page-button-wrapper">
+                    <button class="header__page-button flex-center" onclick="location.href='/index.html'">
+                        <i class="header__page-button-icon ti-angle-left"></i>
+                    </button>
+                    <button class="header__page-button flex-center disabled">
+                        <i class="header__page-button-icon ti-angle-right"></i>
+                    </button>
+                </div>
+
+                <div class="header__play-button-wrapper">
+                    <h2 class="header__playlist-name js-header-playlist-name">Gia đình 5 miệng ăn với thu nhập
+                        1tr5/tháng thì đầu tư kiểu gì? ...</h2>
+                </div>
+
+                <div class="header__info">
+                    <button type="submit" class="btn header__btn--upgrade"
+                        onclick="location.href='https://www.spotify.com/us/premium/'">Upgrade</button>
+                    <button class="header__user-btn js-user-btn">
+                        <img src="/assets/image/avatar.jpeg" alt="" class="header__avatar">
+                        <span class="header__name">phuc.cao2909</span>
+                        <div class="header__avatar-wrapper">
+                            <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--down"
+                                viewBox="0 0 16 16">
+                                <path d="M3 6l5 5.794L13 6z"></path>
+                            </svg>
+                            <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--up"
+                                viewBox="0 0 16 16">
+                                <path d="M13 10L8 4.206 3 10z"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Header User Options -->
+                        <ul class="header__user-option-list">
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Account</span>
+                                    <svg role="img" height="16" width="16" viewBox="0 0 16 16"
+                                        class="header__user-option-img">
+                                        <path fill-rule="evenodd"
+                                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Upgrade to Premium</span>
+                                    <svg role="img" height="16" width="16" viewBox="0 0 16 16"
+                                        class="header__user-option-img">
+                                        <path fill-rule="evenodd"
+                                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Playlist Info -->
+            <div class="playlist__info">
+                <img src="/assets/image/recent-playlist/spiderum.jpeg" alt="This Is XXXTENTACION"
+                    class="playlist__thumb">
+                <div class="playlist__content">
+                    <h1 class="playlist__type">NEW PODCAST EPISODE</h1>
+                    <h2 class="playlist__name">Gia đình 5 miệng ăn với thu nhập 1tr5/tháng thì đầu tư kiểu gì? |
+                        SPIDERUM | artemis | Góc tâm sự</h2>
+                    <div class="playlist__more-info">
+                        <a href="#" class="js-non-updated-info">Spiderum Offical</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Options -->
+            <div class="playlist-options-wrapper js-playlist-options-wrapper">
+                <div class="playlist__option">
+                    <button class="play-btn flex-center playlist__play-btn js-song-play-btn">
+                        <svg class="song-play-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
+                            </polygon>
+                        </svg>
+                        <svg class="song-pause-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect x="5" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                            <rect x="15" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                        </svg>
+                    </button>
+                    <div class="playlist-add-to-library js-no-supported">
+                        <svg role="img" height="32" width="32" viewBox="0 0 32 32" fill="var(--white-color)">
+                            <path
+                                d="M15.5 0C6.94 0 0 6.939 0 15.5 0 24.06 6.94 31 15.5 31S31 24.06 31 15.5C31 6.939 24.06 0 15.5 0zm0 30C7.505 30 1 23.495 1 15.5S7.505 1 15.5 1 30 7.505 30 15.5 23.495 30 15.5 30zm.501-22.999h-1v8h-8v1h8v8h1v-8h8v-1h-8v-8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="playlist-options js-playlist-options-btn">
+                        <svg role="img" height="32" width="32" viewBox="0 0 32 32" fill="var(--white-color)">
+                            <path
+                                d="M5.998 13.999A2 2 0 105.999 18a2 2 0 00-.001-4zm10.001 0A2 2 0 1016 18a2 2 0 000-4zm10.001 0A2 2 0 1026.001 18 2 2 0 0026 14z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+
+                <ul class="playlist-options-list">
+                    <li class="playlist-options-item js-no-supported">Add to queue</li>
+                    <li class="playlist-options-item js-no-supported">Save to Your Episodes</li>
+                    <li class="playlist-options-item js-no-supported">Add to Your library</li>
+                    <li class="playlist-options-item playlist-options-item--more-options js-no-supported">
+                        <span>Add to playlist</span>
+                        <svg role="img" height="16" width="16" fill="var(--white-color)" style="transform: rotate(
+                            90deg);" viewBox="0 0 16 16">
+                            <path d="M13 10L8 4.206 3 10z"></path>
+                        </svg>
+
+                        <ul class="playlist-more-options-list">
+                            <li class="playlist-more-options-item">Add to new playlist</li>
+                        </ul>
+                    </li>
+                    <li class="playlist-options-item playlist-options-item--more-options js-no-supported">
+                        <span>Share</span>
+                        <svg role="img" height="16" width="16" fill="var(--white-color)" style="transform: rotate(
+                            90deg);" viewBox="0 0 16 16">
+                            <path d="M13 10L8 4.206 3 10z"></path>
+                        </svg>
+
+                        <ul class="playlist-more-options-list">
+                            <li class="playlist-more-options-item">Copy Episode link</li>
+                            <li class="playlist-more-options-item">Embed episode</li>
+                        </ul>
+                    </li>
+                    <li class="playlist-options-item js-no-supported">Open in Desktop app</li>
+                </ul>
+            </div>
+
+            <div class="playlist-description">
+                <h1>Episode Description</h1>
+                <div class="playlist-description-text">
+                    <p>"Người khôn ngoan không lao vào kiếm tiền rồi để dành"... nhưng tiền không có thì dù có khôn
+                        ngoan đến mấy thì muốn tiết kiệm cũng chẳng được huống gì là đầu tư. Mình đã suy nghĩ như vậy
+                        cho đến khi mình hiểu được ba mẹ mình đã đầu tư khôn ngoan như thế nào, mặc dù họ chẳng có nhiều
+                        tiền của và thậm chí là họ còn phải bầu bạn với cả cái nghèo, cái đói. Gia đình 5 miệng ăn với
+                        thu nhập 1tr5/ tháng thì đầu tư kiểu gì?
+                    </p>
+                    <p>
+                        Cùng tìm hiểu ngành "Nghệ thuật sáng tạo có gì?" tại:
+                        <a
+                            href="https://shop.spiderum.com/blogs/chuyen-nha-nhen/nghe-thuat-sang-tao-co-gi">https://shop.spiderum.com/blogs/chuyen-nha-nhen/nghe-thuat-sang-tao-co-gi</a>
+                    </p>
+                    <p>Theo dõi Kênh Podcast "Người Trong Muôn Nghề" tại đây:
+                        <a href="https://b.link/youtube-podcast-NTMN">https://b.link/youtube-podcast-NTMN</a>
+                    </p>
+                    <p>Ghé Nhà sách Spiderum trên SHOPEE ngay thôi các bạn ơi:
+                        <a href="https://anchor.fm/spiderum-giai-tri">https://anchor.fm/spiderum-giai-tri</a>
+                    </p>
+                    <p>______________ </p>
+                    <p>Bài viết: "Người khôn ngoan không lao vào kiếm tiền rồi để dành"... </p>
+                    <p>Được viết bởi: artemis </p>
+                    <p>Link bài viết:
+                        <a
+                            href="https://spiderum.com/bai-dang/Nguoi-khon-ngoan-khong-lao-vao-kiem-tien-roi-de-danh-11cj">https://spiderum.com/bai-dang/Nguoi-khon-ngoan-khong-lao-vao-kiem-tien-roi-de-danh-11cj</a>
+                    </p>
+                    <p>--- <br>
+                        Send in a voice message: https://anchor.fm/spiderum/message
+                        <br>
+                        Support this podcast: <a
+                            href="https://anchor.fm/spiderum/support">https://anchor.fm/spiderum/support</a>
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <!-- Player -->
         <div class="player">
             <div class="player-song-info">
                 <img src="/assets/image/recent-playlist/spiderum.jpeg" alt="changes" class="player-song-thumb">
                 <div class="player-song-content">
-                    <div class="player-limited-wrapper">
-                        <h1 class="player-song-name">
-                            <a href="#" class="js-non-updated-info">Gia đình 5 miệng ăn với thu nhập 1tr5/tháng thì đầu
-                                tư
-                                kiểu gì? | SPIDERUM | artemis | Góc
-                                tâm sự</a>
-                        </h1>
-                    </div>
+                    <h1 class="player-song-name">
+                        <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+                            <a href="#" class="js-non-updated-info">
+                                Gia đình 5 miệng ăn với thu nhập 1tr5/tháng thì đầu tư kiểu gì? | SPIDERUM | artemis
+                                | Góc tâm sự
+                            </a>
+                        </marquee>
+                    </h1>
                     <h2 class="player-song-author">
                         <a href="#" class="js-non-updated-info">Spiderum Offical</a>
                     </h2>
                 </div>
                 <div class="player-song-action">
+                    <div class="song-add-to-library js-no-supported">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
+                            <path
+                                d="M7.5 0a7.5 7.5 0 100 15 7.5 7.5 0 000-15zm0 14C3.916 14 1 11.084 1 7.5S3.916 1 7.5 1 14 3.916 14 7.5 11.084 14 7.5 14zM8 3H7v4H3v1h4v4h1V8h4V7H8V3z">
+                            </path>
+                        </svg>
+                    </div>
                     <div class="song-play-on-tab js-no-supported">
                         <svg width="16" height="16" class="song-play-on-tab-icon">
                             <g fill-rule="evenodd" fill="var(--white-color)">
@@ -148,13 +345,6 @@
                 </div>
             </div>
             <div class="player-options">
-                <div class="player-mic js-no-supported">
-                    <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
-                        <path
-                            d="M8.5 1A4.505 4.505 0 004 5.5c0 .731.191 1.411.502 2.022L1.99 13.163a1.307 1.307 0 00.541 1.666l.605.349a1.307 1.307 0 001.649-.283L9.009 9.95C11.248 9.692 13 7.807 13 5.5 13 3.019 10.981 1 8.5 1zM4.023 14.245a.307.307 0 01-.388.066l-.605-.349a.309.309 0 01-.128-.393l2.26-5.078A4.476 4.476 0 007.715 9.92l-3.692 4.325zM8.5 9C6.57 9 5 7.43 5 5.5S6.57 2 8.5 2 12 3.57 12 5.5 10.429 9 8.5 9z">
-                        </path>
-                    </svg>
-                </div>
                 <div class="player-queue js-no-supported">
                     <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
                         <path d="M2 2v5l4.33-2.5L2 2zm0 12h14v-1H2v1zm0-4h14V9H2v1zm7-5v1h7V5H9z"></path>
@@ -198,10 +388,10 @@
             <!-- Player Control -->
             <div class="player-control">
                 <div class="player-control-wrapper">
-                    <div class="player-shuffle">
-                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-shuffle-icon">
+                    <div class="player-previous-15s">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
                             <path
-                                d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z">
+                                d="M10 4.001H6V2.5l-3.464 2L6 6.5V5h4c2.206 0 4 1.794 4 4s-1.794 4-4 4v1c2.75 0 5-2.25 5-5s-2.25-4.999-5-4.999zM2.393 8.739c-.083.126-.19.236-.32.332a1.642 1.642 0 01-.452.229 1.977 1.977 0 01-.56.092v.752h1.36V14h1.096V8.327h-.96c-.027.15-.081.287-.164.412zm5.74 2.036a1.762 1.762 0 00-.612-.368 2.295 2.295 0 00-.78-.128c-.191 0-.387.031-.584.092a1.188 1.188 0 00-.479.268l.327-1.352H8.38v-.96H5.252l-.688 2.872c.037.017.105.042.204.076l.308.108.309.107.212.076c.096-.112.223-.205.38-.28.157-.075.337-.112.54-.112.133 0 .264.021.392.063.128.043.24.105.336.188a.907.907 0 01.233.316c.059.128.088.275.088.44a.927.927 0 01-.628.916 1.19 1.19 0 01-.404.068c-.16 0-.306-.025-.435-.076a1.046 1.046 0 01-.34-.212.992.992 0 01-.229-.32 1.171 1.171 0 01-.1-.4l-1.04.248c.021.225.086.439.195.645.109.205.258.388.444.548.187.16.406.287.66.38.253.093.534.14.844.14.336 0 .636-.052.9-.156.264-.104.487-.246.672-.424.184-.179.325-.385.424-.62.099-.235.148-.485.148-.752 0-.298-.049-.565-.145-.8a1.686 1.686 0 00-.399-.591z">
                             </path>
                         </svg>
                     </div>
@@ -228,10 +418,10 @@
                             <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path>
                         </svg>
                     </div>
-                    <div class="player-repeat">
-                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-repeat-icon">
+                    <div class="player-next-15s">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
                             <path
-                                d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z">
+                                d="M6 5h4v1.5l3.464-2L10 2.5V4H6C3.25 4 1 6.25 1 9s2.25 5 5 5v-1c-2.206 0-4-1.794-4-4s1.794-4 4-4zm1.935 3.739a1.306 1.306 0 01-.32.332c-.13.096-.281.172-.451.228a1.956 1.956 0 01-.562.092v.752h1.36v3.856h1.096V8.327h-.96c-.026.15-.08.287-.163.412zm6.139 2.628a1.664 1.664 0 00-.399-.592 1.747 1.747 0 00-.612-.368 2.295 2.295 0 00-.78-.128c-.191 0-.387.03-.584.092-.197.061-.357.15-.479.268l.327-1.352h2.376v-.96h-3.128l-.688 2.872c.037.016.106.041.204.076l.308.108.309.108.212.076c.096-.112.223-.206.38-.28.157-.075.337-.112.54-.112.133 0 .264.021.392.064a.97.97 0 01.336.188.907.907 0 01.233.316c.058.128.088.274.088.44a.941.941 0 01-.3.721.995.995 0 01-.328.196 1.19 1.19 0 01-.404.068c-.16 0-.306-.025-.436-.076a1.03 1.03 0 01-.569-.532 1.171 1.171 0 01-.1-.4l-1.04.248c.02.224.086.439.195.644.109.205.258.388.444.548.186.16.406.287.66.38.253.093.534.14.844.14.336 0 .636-.052.9-.156.264-.104.487-.245.672-.424.184-.179.325-.385.424-.62a1.91 1.91 0 00.148-.752c0-.3-.049-.566-.145-.801z">
                             </path>
                         </svg>
                     </div>
@@ -244,7 +434,9 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- Javascript -->
+        <script src="/javascript/podcast/podcast.js"></script>
 </body>
 
 </html>

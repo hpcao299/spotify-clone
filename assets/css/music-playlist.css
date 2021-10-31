@@ -695,9 +695,12 @@
 .player-song-action{
     display: flex;
     align-items: center;
-    margin-left: 28px;
+    margin-left: 16px;
     gap: 2px;
 }
+.playlist-add-to-library,
+.player-next-15s,
+.song-add-to-library,
 .playlist-options,
 .player-volume,
 .player-mic,
@@ -705,6 +708,7 @@
 .player-connect,
 .player-repeat,
 .player-next,
+.player-previous-15s,
 .player-previous,
 .player-shuffle,
 .song-play-on-tab,
@@ -713,6 +717,9 @@
     cursor: pointer;
     opacity: 0.7;
 }
+.playlist-add-to-library:hover,
+.player-next-15s:hover,
+.song-add-to-library:hover,
 .playlist-options:hover,
 .player-volume:hover,
 .player-mic:hover,
@@ -721,6 +728,7 @@
 .player-repeat:hover,
 .player-next:hover,
 .player-previous:hover,
+.player-previous-15s:hover,
 .player-shuffle:hover,
 .song-play-on-tab:hover,
 .playlist-liked:hover,
@@ -745,6 +753,8 @@
 .song-liked.active .song-liked-icon{
     display: block;
 }
+.player-next-15s,
+.song-add-to-library,
 .player-volume,
 .player-connect,
 .player-queue,
@@ -753,6 +763,7 @@
 .song-play-on-tab,
 .player-shuffle,
 .player-previous,
+.player-previous-15s,
 .player-next,
 .player-repeat{
     padding: 7px;
@@ -801,6 +812,7 @@
     justify-content: center;
     align-items: center;
     gap: 6px;
+    margin-left: 30px;
 }
 .player-time-range {
     width: 467px;
