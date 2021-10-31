@@ -1,0 +1,125 @@
+:root{
+    --black-color: #000;
+    --white-color: #fff;
+
+    --play-button-color: #1BB954;
+    --content-background-color: #121212;
+
+    --sidebar-width: 241px;
+    --header-height: 60px;
+    --position-right-toast: 32px;
+    --player-height: 90px;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 100%;
+    font-family: spotify-circular, spotify-circular-cyrillic, spotify-circular-arabic, spotify-circular-hebrew, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", Meiryo, "MS Gothic", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    overscroll-behavior-y: none;
+}
+
+/* Common Uses */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mt-30{
+    margin-top: 30px;
+}
+/* Button */
+.btn{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 8px 34px;
+    min-width: 139px;
+    border: 1px solid rgba(255,255,255,.7);
+    background-color: rgba(0,0,0,.7);
+    border-radius: 500px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1.76px;
+    line-height: 18px;
+    text-align: center;
+    will-change: transform;
+    text-decoration: none;
+    color: var(--white-color);
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+.btn a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.btn:hover{
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+    background-color: #000;
+    border: 1px solid #fff;
+}
+.play-btn{
+    width: 40px;
+    height: 40px;
+    background-color: var(--play-button-color);
+    border: none;
+    border-radius: 50%;
+    transition: transform 33ms cubic-bezier(.3,0,0,1),-webkit-transform 33ms cubic-bezier(.3,0,0,1);
+    box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+    cursor: pointer;
+}
+.play-btn:hover {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+}
+
+/* Line limited */
+.word-1-line{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.word-2-line{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* JS Play Btn Icon */
+.song-pause-icon{
+    display: none;
+}
+.js-song-play-btn.playing .song-play-icon{
+    display: none;
+}
+.js-song-play-btn.playing .song-pause-icon{
+    display: block;
+}
+
+/* Animation */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(calc(100% + var(--position-right-toast)));
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
