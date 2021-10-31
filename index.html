@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/image/spotify-website-logo.png"> -->
+    <title>Spotify - Web Player</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="" class="sidebar__logo-link">
+                <svg viewBox="0 0 1134 340" class="sidebar__logo-img">
+                    <title>Spotify</title>
+                    <path fill="#fff"
+                        d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z">
+                    </path>
+                </svg>
+            </a>
+
+            <!-- Sidebar List -->
+            <ul class="sidebar__list">
+                <li class="sidebar__item active">
+                    <a href="#" class="sidebar__item-link">
+                        <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
+                            <path d="M21 22V7.174l-9.001-5.195L3 7.214V22h7v-7h4v7z"></path>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item js-no-supported">
+                    <a href="#" class="sidebar__item-link">
+                        <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
+                            <path
+                                d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z">
+                            </path>
+                        </svg>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="sidebar__item js-no-supported">
+                    <a href="#" class="sidebar__item-link">
+                        <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
+                            <path
+                                d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z">
+                            </path>
+                        </svg>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="spacer" style="margin-top: 26px;"></div>
+
+            <ul class="sidebar__list sidebar__list--border-bottom js-no-supported">
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__item-link">
+                        <div class="sidebar__img-wrapper flex-center sidebar__img-wrapper-create-playlist">
+                            <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-1bi12j5-0 gSLhUO">
+                                <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                                <path fill="none" d="M0 0h16v16H0z"></path>
+                            </svg>
+                        </div>
+                        <span>Create Playlist</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__item-link">
+                        <div class="sidebar__img-wrapper flex-center sidebar__img-wrapper-liked-songs">
+                            <svg role="img" height="12" width="12" fill="#fff" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-1bi12j5-0 gSLhUO">
+                                <path fill="none" d="M0 0h16v16H0z"></path>
+                                <path
+                                    d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="sidebar__playlist-list">
+                <li class="sidebar__playlist-item">
+                    <a href="./html/xxxtentacion.html" class="sidebar__playlist-link word-1-line">This Is
+                        XXXTENTACION</a>
+                </li>
+                <li class="sidebar__playlist-item">
+                    <a href="./html/indieViet.html" class="sidebar__playlist-link word-1-line">Indie Việt 2020</a>
+                </li>
+                <li class="sidebar__playlist-item">
+                    <a href="./html/vietnamHotHits.html" class="sidebar__playlist-link word-1-line">Vietnam Hot Hits
+                        2020</a>
+                </li>
+            </ul>
+
+            <div class="sidebar__install">
+                <a href="https://open.spotify.com/download" class="sidebar__install-link">
+                    <svg role="img" height="24" width="24" viewBox="0 0 24 24" class="sidebar__install-link-img">
+                        <path
+                            d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1 22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652 4.678 5.44 4.694-5.439-.757-.653-3.439 3.984z">
+                        </path>
+                    </svg>
+                    <span>Install App</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="content">
+            <!-- Content Header -->
+            <div class="content__gradient"></div>
+            <header class="content__header"></header>
+            <nav class="header__nav">
+                <div class="header__page-button-wrapper">
+                    <button class="header__page-button flex-center disabled">
+                        <i class="header__page-button-icon ti-angle-left"></i>
+                    </button>
+                    <button class="header__page-button flex-center disabled">
+                        <i class="header__page-button-icon ti-angle-right"></i>
+                    </button>
+                </div>
+
+                <div class="header__info">
+                    <button type="submit" class="btn header__btn--upgrade"
+                        onclick="location.href='https://www.spotify.com/us/premium/'">Upgrade</button>
+                    <button class="header__user-btn js-user-btn">
+                        <img src="./assets/image/avatar.jpeg" alt="" class="header__avatar">
+                        <span class="header__name">phuc.cao2909</span>
+                        <div class="header__avatar-wrapper">
+                            <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--down"
+                                viewBox="0 0 16 16">
+                                <path d="M3 6l5 5.794L13 6z"></path>
+                            </svg>
+                            <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--up"
+                                viewBox="0 0 16 16">
+                                <path d="M13 10L8 4.206 3 10z"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Header User Options -->
+                        <ul class="header__user-option-list">
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Account</span>
+                                    <svg role="img" height="16" width="16" viewBox="0 0 16 16"
+                                        class="header__user-option-img">
+                                        <path fill-rule="evenodd"
+                                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Upgrade to Premium</span>
+                                    <svg role="img" height="16" width="16" viewBox="0 0 16 16"
+                                        class="header__user-option-img">
+                                        <path fill-rule="evenodd"
+                                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Playlist Content -->
+            <div class="playlist__content">
+                <div class="recent-playlist">
+                    <h1 class="recent-playlist__heading">
+                        <span class="recent-playlist-first-greeting"></span><span
+                            class="recent-playlist-first-greeting-user"></span>
+                    </h1>
+                    <div class="grid">
+                        <div class="row">
+                            <div class="col l-4">
+                                <div class="recent-playlist-box">
+                                    <a href="./html/xxxtentacion.html" class="recent-playlist-link">
+                                        <img src="./assets/image/recent-playlist/XXXTENTACION-playlist.jpeg"
+                                            class="recent-playlist-thumb">
+                                        <h2 class="recent-playlist-name word-2-line">This Is XXXTENTACION</h2>
+                                        <div class="recent-playlist-btn-wrapper">
+                                            <button class="play-btn flex-center">
+                                                <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                    aria-hidden="true">
+                                                    <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                    </polygon>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="recent-playlist-box">
+                                    <a href="./html/4chamkhongEp13.html" class="recent-playlist-link">
+                                        <img src="./assets/image/recent-playlist/bon-cham-khong-tam-le-podcast.jpeg"
+                                            class="recent-playlist-thumb">
+                                        <h2 class="recent-playlist-name word-2-line">EP 13 - Tâm Lê: Embracing an
+                                            Entrepreneur
+                                            Mindset</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="recent-playlist-box">
+                                    <a href="./html/spiderum.html" class="recent-playlist-link">
+                                        <img src="./assets/image/recent-playlist/spiderum.jpeg"
+                                            class="recent-playlist-thumb">
+                                        <h2 class="recent-playlist-name word-2-line">Gia đình 5 miệng ăn với thu nhập
+                                            1tr5/tháng thì
+                                            đầu tư kiểu gì?|SPIDERUM|artemis|Góc tâm sự</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="recent-playlist-box">
+                                    <a href="./html/indieViet.html" class="recent-playlist-link">
+                                        <img src="./assets/image/recent-playlist/Indie-Viet-Playlist.jpeg"
+                                            class="recent-playlist-thumb">
+                                        <h2 class="recent-playlist-name word-2-line">Indie Việt 2020</h2>
+                                        <div class="recent-playlist-btn-wrapper">
+                                            <button class="play-btn flex-center">
+                                                <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                    aria-hidden="true">
+                                                    <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                    </polygon>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="recent-playlist-box">
+                                    <a href="./html/vietnamHotHits.html" class="recent-playlist-link">
+                                        <img src="./assets/image/recent-playlist/vietnam-hot-hits.jpeg"
+                                            class="recent-playlist-thumb">
+                                        <h2 class="recent-playlist-name word-2-line">Vietnam Hot Hits 2020</h2>
+                                        <div class="recent-playlist-btn-wrapper">
+                                            <button class="play-btn flex-center">
+                                                <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                    aria-hidden="true">
+                                                    <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                    </polygon>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="recent-playlist-box">
+                                    <a href="./html/giangoi.html" class="recent-playlist-link">
+                                        <img src="./assets/image/recent-playlist/nguoi-lon-mang-xa-hoi-podcast.jpeg"
+                                            class="recent-playlist-thumb">
+                                        <h2 class="recent-playlist-name word-2-line">#19 - người lớn quá tải mạng xã hội
+                                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Playlist (line 1) -->
+                <div class="popular-playlist mt-30">
+                    <h2 class="popular-playlist-heading">
+                        <a href="#" class="js-no-updated">Popular with listeners of Giang Ơi Radio</a>
+                    </h2>
+                    <div class="grid popular-playlist-wrapper">
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-1/ohkago.jpeg" alt="Ohkhago"
+                                    class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Ohkhago</h4>
+                                <p class="popular-playlist-author word-2-line">Kha NGUYEN</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-1/1000-bai-hoc-danh-nhan.jpeg"
+                                    alt="1000 Bài Học Danh Nhân" class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">1000 Bài Học Danh Nhân</h4>
+                                <p class="popular-playlist-author word-2-line">1000 Bài Học Danh Nhân - Những Câu Chuyện
+                                    Và Bài Học
+                                    Đặc Sắc Nhất Từ Các Vĩ Nhân</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-1/truyen-tren-mai-nha.jpeg"
+                                    alt="Truyện trên mái nhà" class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Truyện trên mái nhà</h4>
+                                <p class="popular-playlist-author word-2-line">Phan Minh Hiếu</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-1/to-la-tung.jpeg" alt="Tớ Là Tùng"
+                                    class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Tớ Là Tùng</h4>
+                                <p class="popular-playlist-author word-2-line">Tớ Là Tùng!</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-1/gai-gia-manh-me.jpeg"
+                                    alt="Gái già mạnh mẽ" class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Gái già mạnh mẽ</h4>
+                                <p class="popular-playlist-author word-2-line">By J in Saigon</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Playlist (line 2) -->
+                <div class="recommended-playlist">
+                    <h2 class="recommended-playlist-heading">Made for you</h2>
+                    <h3 class="recommended-playlist-subheading">Get better recommendations the more you listen.</h3>
+                    <div class="grid recommended-playlist-wrapper">
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-2/dailymix.jpeg" alt="Daily Mix 1"
+                                        class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Daily Mix 1</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Justatee, T Team, Chillies, and more
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-2/dailymix-2.jpeg"
+                                        alt="Daily Mix 2" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Daily Mix 2</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Drifting Mantra, Energy Healer, Pure
+                                    Healing
+                                    Waves and more</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-2/newjams.jpeg"
+                                        alt="Discover Weekly" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Discover Weekly</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Your weekly mixtape of fresh music.
+                                    Enjoy new
+                                    music and deep cuts picked for you. Updates every Monday.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-2/release-radar.jpeg"
+                                        alt="Release Radar" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Release Radar</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Catch all the latest music from
+                                    artists you
+                                    follow, plus new singles picked for you. Updates every Friday.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box-disabled"></div>
+                    </div>
+                </div>
+
+                <!-- Recommended Playlist (line 3) -->
+                <div class="recommended-playlist">
+                    <h2 class="recommended-playlist-heading">
+                        <a href="#" class="js-no-updated">More like This Is XXXTENTACION</a>
+                    </h2>
+                    <div class="grid recommended-playlist-wrapper">
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-3/travis-scott.jpeg"
+                                        alt="This Is Travis Scott" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">This Is Travis Scott</h3>
+                                <h4 class="recommended-playlist-author word-2-line">This Is Travis Scott. The essential
+                                    tracks, all
+                                    in one playlist.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-3/lil-uzi-vert.jpeg"
+                                        alt="This Is Lil Uzi Vert" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">This Is Lil Uzi Vert</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Hear all of the rapper's greatest
+                                    hits and
+                                    features. Flawless.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-3/juice-wrld.jpeg"
+                                        alt="This Is Jucie Wrld" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">This Is Jucie Wrld</h3>
+                                <h4 class="recommended-playlist-author word-2-line">This is Juice WRLD. The essential
+                                    tracks, all in
+                                    one playlist.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-3/lil-yatchy.jpeg"
+                                        alt="This Is Lil Yatchy" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">This Is Lil Yatchy</h3>
+                                <h4 class="recommended-playlist-author word-2-line">This is Lil Yachty. The essential
+                                    tracks, all in
+                                    one playlist.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-3/21-savage.jpeg"
+                                        alt="This Is 21 Savage" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">This Is 21 Savage</h3>
+                                <h4 class="recommended-playlist-author word-2-line">This is 21 Savage. The essential
+                                    tracks, all in
+                                    one playlist.</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Playlist (line 4) -->
+                <div class="recommended-playlist">
+                    <h2 class="recommended-playlist-heading">
+                        <a href="#" class="js-no-updated">Lựa chọn của Spotify</a>
+                    </h2>
+                    <div class="grid recommended-playlist-wrapper">
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-4/hot-hits-vietnam.jpeg"
+                                        alt="This Is Travis Scott" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Hot Hits Vietnam</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Đông tới Tây, đây là những ca khúc
+                                    thịnh hành
+                                    nhất ở Việt Nam. Ảnh bìa: DJ Snake, Ozuna, Megan Thee Stallion, LISA</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-4/equal-vietnam.jpeg"
+                                        alt="EQUAL Vietnam" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">EQUAL Vietnam</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Cùng tôn vinh tài năng và âm nhạc
+                                    của những nữ
+                                    nghệ sĩ Việt. Ảnh bìa: Mỹ Anh</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-4/v-pop-ko-the-thieu.jpeg"
+                                        alt="This Is Jucie Wrld" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">V-Pop Không Thể Thiếu</h3>
+                                <h4 class="recommended-playlist-author word-2-line">
+                                    V-Pop đã đơm hoa trên những khúc ca này. Ảnh bìa: Bích Phương</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-4/pop-rising-vietnam.jpeg"
+                                        alt="This Is Lil Yatchy" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Pop Rising Vietnam</h3>
+                                <h4 class="recommended-playlist-author word-2-line">
+                                    Những ca khúc sẽ thành hit trong nay mai. Ảnh bìa: keshi</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-4/thien-ha-nghe-gi.jpeg"
+                                        alt="Thiên Hạ Nghe Gì" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Thiên Hạ Nghe Gì</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Những gì mà người bên cạnh bạn đang
+                                    nghe. Ảnh
+                                    bìa: Low G, Thắng</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Playlist (line 5) -->
+                <div class="recommended-playlist">
+                    <h2 class="recommended-playlist-heading">
+                        <a href="#" class="js-no-updated">Women of V-pop</a>
+                    </h2>
+                    <div class="grid recommended-playlist-wrapper">
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-5/my-tam.jpeg"
+                                        alt="Mãi Yêu Mỹ Tâm" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Mỹ Tâm</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Bài hát mới Cuộc Hẹn Trong Mơ cùng
+                                    những ca khúc
+                                    hay nhất của Mỹ Tâm</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-5/hoang-thuy-linh.jpeg"
+                                        alt="Mãi Yêu Hoàng Thuỳ Linh" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Hoàng Thuỳ Linh</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Thưởng thức album mới nhất Hoàng
+                                    cùng những bài
+                                    hit khác của Hoàng Thuỳ Linh</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-5/nhu-quynh.jpeg"
+                                        alt="Mãi Yêu Như Quỳnh" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Như Quỳnh</h3>
+                                <h4 class="recommended-playlist-author word-2-line">
+                                    Những ca khúc hay nhất từ giọng hát quen thuộc Như Quỳnh
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-5/nguyen-ha.jpeg"
+                                        alt="Mãi Yêu Nguyên Hà" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Nguyên Hà</h3>
+                                <h4 class="recommended-playlist-author word-2-line">
+                                    Bài hát mới Điều Ngọt Ngào Khi Chờ Đợi Anh cùng những ca khúc hay nhất từ giọng hát
+                                    Nguyên Hà</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-5/trang.jpeg" alt="Mãi Yêu Trang"
+                                        class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Trang</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Ca khúc mới nhất Và Xem Như Chúng Ta
+                                    Chỉ Còn và
+                                    những bản "nhạc của Trang"</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Playlist (line 6) -->
+                <div class="popular-playlist mt-30">
+                    <h2 class="popular-playlist-heading">
+                        <a href="#" class="js-no-updated">Popular with listeners of The Present Writer</a>
+                    </h2>
+                    <div class="grid popular-playlist-wrapper">
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-6/minh-di-lac.jpeg" alt="Ohkhago"
+                                    class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Minh Đi Lạc</h4>
+                                <p class="popular-playlist-author word-2-line">Minh Đào</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-6/psychology.jpeg"
+                                    alt="1000 Bài Học Danh Nhân" class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Ameteur Psychology - Tay mơ học đời bằng
+                                    Tâm lý học
+                                </h4>
+                                <p class="popular-playlist-author word-2-line">Nguyen Doan Minh Thu</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-6/ke-cho-toi-nghe.jpeg"
+                                    alt="Truyện trên mái nhà" class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Kể Cho Tôi Nghe</h4>
+                                <p class="popular-playlist-author word-2-line">Radio Người Giữ Kỉ Niệm</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-6/the-blue-expat.jpeg" alt="Tớ Là Tùng"
+                                    class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">The Blue Expat</h4>
+                                <p class="popular-playlist-author word-2-line">Link Po Ng.</p>
+                            </a>
+                        </div>
+                        <div class="popular-playlist-box js-no-updated">
+                            <a href="#" class="popular-playlist-link">
+                                <img src="./assets/image/popular-playlist/line-6/cham-cham-ma-song.jpeg"
+                                    alt="Gái già mạnh mẽ" class="popular-playlist-img">
+                                <h4 class="popular-playlist-name word-1-line">Chầm chậm mà sống</h4>
+                                <p class="popular-playlist-author word-2-line">Nam Phương</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Playlist (line 7) -->
+                <div class="recommended-playlist">
+                    <h2 class="recommended-playlist-heading">
+                        <a href="#" class="js-no-updated">All about Viet indie</a>
+                    </h2>
+                    <div class="grid recommended-playlist-wrapper">
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-7/vu.jpeg" alt="Mãi Yêu Vũ."
+                                        class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Vũ.</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Happy For You, bài song ca cùng
+                                    Lukas Graham và
+                                    những ca khúc khác của "hoàng tử nhạc indie Việt"</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-7/ngot.jpeg" alt="Mãi Yêu Ngọt"
+                                        class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Ngọt</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Bài hát mới nhất "để quên" và những
+                                    ca khúc khác
+                                    dành cho các Kẹo.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-5/trang.jpeg" alt="Mãi Yêu Trang"
+                                        class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Trang</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Ca khúc mới nhất Và Xem Như Chúng Ta
+                                    Chỉ Còn và
+                                    những bản "nhạc của Trang"</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-7/ca-hoi-hoang.jpeg"
+                                        alt="Mãi Yêu Cá Hồi Hoang" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Mãi Yêu Cá Hồi Hoang</h3>
+                                <h4 class="recommended-playlist-author word-2-line">
+                                    Fx, album mới nhất diễn live của nhóm indie Sài Thành với nét nhạc đặc trưng
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-7/do-tuoi.jpeg" alt="Đỏ Tươi"
+                                        class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Đỏ Tươi</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Gác Mái</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Playlist (line 8) -->
+                <div class="recommended-playlist">
+                    <h2 class="recommended-playlist-heading">
+                        <a href="#" class="js-no-updated">More of what you like</a>
+                    </h2>
+                    <h3 class="recommended-playlist-subheading">Hear a little bit of everything you love.</h3>
+                    <div class="grid recommended-playlist-wrapper">
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-8/top-nghe-si.jpeg"
+                                        alt="Mãi Yêu Vũ." class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Top Nghệ Sĩ 2019</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Những nghệ sĩ có lượt nghe nhiều
+                                    nhất năm 2019
+                                    tại Việt Nam.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-8/top-nam-nghe-si.jpeg"
+                                        alt="Top Nam Nghệ Sĩ 2020" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Top Nam Nghệ Sĩ 2020</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Những nghệ sĩ nam được nghe nhiều
+                                    nhất năm 2020
+                                    tại Việt Nam. Ảnh bìa: Đen</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-8/top-nu-nghe-si.jpeg"
+                                        alt="Top Nữ Nghệ Sĩ 2019" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Top Nữ Nghệ Sĩ 2019</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Những giọng hát nữ được nghe nhiều
+                                    nhất năm 2019
+                                    tại Việt Nam.</h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-8/top-tracks.jpeg"
+                                        alt="Top Tracks of 2020 Indonesia" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Top Tracks of 2020 Indonesia</h3>
+                                <h4 class="recommended-playlist-author word-2-line">
+                                    Kumpulan lagu yang paling banyak diputar di
+                                    tahun 2020. Cover: Mahen
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="recommended-playlist-box js-no-updated">
+                            <a href="#" class="recommended-playlist-link">
+                                <div class="recommended-playlist-img-wrapper">
+                                    <img src="./assets/image/recommeded-playlist/line-8/top-nhom-nhac.jpeg"
+                                        alt="Top Nhóm Nhạc 2020" class="recommended-playlist-img">
+                                    <div class="play-btn-wrapper--recommended">
+                                        <button class="play-btn flex-center">
+                                            <svg height="16" role="img" width="16" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="#fff">
+                                                </polygon>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3 class="recommended-playlist-name word-1-line">Top Nhóm Nhạc 2020</h3>
+                                <h4 class="recommended-playlist-author word-2-line">Những nhóm nhạc được nghe nhiều nhất
+                                    năm 2020
+                                    tại Việt Nam. Ảnh bìa: Ngọt</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Haven't Updated Playlist Message -->
+        <div id="toast">
+        </div>
+        <!-- Javascript -->
+        <script type="module" src="./javascript/app.js"></script>
+</body>
+
+</html>
