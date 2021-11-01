@@ -159,6 +159,7 @@
     margin-left: var(--sidebar-width);
     z-index: 5;
     opacity: 0;
+    transition: all linear 0.2s;
 }
 .header__nav{
     margin-left: var(--sidebar-width);
@@ -356,6 +357,7 @@
     margin: 0 0 0 5.5px;
     color: rgba(255,255,255,.7);
 }
+
 
 /* Playlist Options */
 .playlist__play-btn{
@@ -878,7 +880,6 @@
       box-shadow: -80px 0 0 80px #1BB954;
     }
 }
-
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Haven't Updated Message */

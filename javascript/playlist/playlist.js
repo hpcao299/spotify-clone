@@ -42,9 +42,9 @@ function start() {
             showNonUpdatedInfo();
         }
     })
+
     // Song Like Button Click Events
     songLikeClickEvent(songLikeBtns);
-    console.log(songLikeBtns)
 
     // Playlist Like Button Click Event
     playlistLikeClickEvent(playlistLikeBtn);

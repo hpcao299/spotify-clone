@@ -135,7 +135,7 @@
 
                 <div class="header__play-button-wrapper">
                     <h2 class="header__playlist-name js-header-playlist-name">Gia đình 5 miệng ăn với thu nhập
-                        1tr5/tháng thì đầu tư kiểu gì? ...</h2>
+                        1tr5/tháng thì đầu tư kiểu...</h2>
                 </div>
 
                 <div class="header__info">
@@ -211,7 +211,7 @@
             <!-- Playlist Options -->
             <div class="playlist-options-wrapper js-playlist-options-wrapper">
                 <div class="playlist__option">
-                    <button class="play-btn flex-center playlist__play-btn js-song-play-btn">
+                    <button class="play-btn flex-center playlist__play-btn js-audio-play-btn">
                         <svg class="song-play-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
                             aria-hidden="true">
                             <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
@@ -242,7 +242,6 @@
                 <ul class="playlist-options-list">
                     <li class="playlist-options-item js-no-supported">Add to queue</li>
                     <li class="playlist-options-item js-no-supported">Save to Your Episodes</li>
-                    <li class="playlist-options-item js-no-supported">Add to Your library</li>
                     <li class="playlist-options-item playlist-options-item--more-options js-no-supported">
                         <span>Add to playlist</span>
                         <svg role="img" height="16" width="16" fill="var(--white-color)" style="transform: rotate(
@@ -270,7 +269,7 @@
                 </ul>
             </div>
 
-            <div class="playlist-description">
+            <div class="playlist-description js-playlist-description">
                 <h1>Episode Description</h1>
                 <div class="playlist-description-text">
                     <p>"Người khôn ngoan không lao vào kiếm tiền rồi để dành"... nhưng tiền không có thì dù có khôn
@@ -303,9 +302,20 @@
                         Support this podcast: <a
                             href="https://anchor.fm/spiderum/support">https://anchor.fm/spiderum/support</a>
                     </p>
+
+                    <div class="playlist-text-options">
+                        <span class="playlist-text-see-more-option js-description-see-more">... see more</span>
+                        <span class="playlist-text-show-less-option js-description-show-less">show less</span>
+                    </div>
                 </div>
             </div>
+            <button class="btn content-episodes-btn js-non-updated-info">SEE ALL EPISODES</button>
         </div>
+
+        <audio
+            src="../assets/audio/gia_dinh_5_mieng_an_voi_thu_nhap_1tr5_thang_thi_dau_tu_kieu_gi_spiderum_artemis_goc_tam_su_-175998409670260326.mp3"
+            id="audio">
+        </audio>
 
         <!-- Player -->
         <div class="player">
@@ -313,7 +323,8 @@
                 <img src="/assets/image/recent-playlist/spiderum.jpeg" alt="changes" class="player-song-thumb">
                 <div class="player-song-content">
                     <h1 class="player-song-name">
-                        <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+                        <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();"
+                            style="height: 16px">
                             <a href="#" class="js-non-updated-info">
                                 Gia đình 5 miệng ăn với thu nhập 1tr5/tháng thì đầu tư kiểu gì? | SPIDERUM | artemis
                                 | Góc tâm sự
@@ -388,19 +399,19 @@
             <!-- Player Control -->
             <div class="player-control">
                 <div class="player-control-wrapper">
-                    <div class="player-previous-15s">
+                    <div class="player-previous-15s js-audio-previous-15s">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
                             <path
                                 d="M10 4.001H6V2.5l-3.464 2L6 6.5V5h4c2.206 0 4 1.794 4 4s-1.794 4-4 4v1c2.75 0 5-2.25 5-5s-2.25-4.999-5-4.999zM2.393 8.739c-.083.126-.19.236-.32.332a1.642 1.642 0 01-.452.229 1.977 1.977 0 01-.56.092v.752h1.36V14h1.096V8.327h-.96c-.027.15-.081.287-.164.412zm5.74 2.036a1.762 1.762 0 00-.612-.368 2.295 2.295 0 00-.78-.128c-.191 0-.387.031-.584.092a1.188 1.188 0 00-.479.268l.327-1.352H8.38v-.96H5.252l-.688 2.872c.037.017.105.042.204.076l.308.108.309.107.212.076c.096-.112.223-.205.38-.28.157-.075.337-.112.54-.112.133 0 .264.021.392.063.128.043.24.105.336.188a.907.907 0 01.233.316c.059.128.088.275.088.44a.927.927 0 01-.628.916 1.19 1.19 0 01-.404.068c-.16 0-.306-.025-.435-.076a1.046 1.046 0 01-.34-.212.992.992 0 01-.229-.32 1.171 1.171 0 01-.1-.4l-1.04.248c.021.225.086.439.195.645.109.205.258.388.444.548.187.16.406.287.66.38.253.093.534.14.844.14.336 0 .636-.052.9-.156.264-.104.487-.246.672-.424.184-.179.325-.385.424-.62.099-.235.148-.485.148-.752 0-.298-.049-.565-.145-.8a1.686 1.686 0 00-.399-.591z">
                             </path>
                         </svg>
                     </div>
-                    <div class="player-previous">
+                    <div class="player-previous js-audio-previous">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-previous-icon">
                             <path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path>
                         </svg>
                     </div>
-                    <div class="player-play js-song-play-btn">
+                    <div class="player-play js-audio-play-btn">
                         <button class="play-btn flex-center player-play-icon-wrapper">
                             <svg class="song-play-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
                                 aria-hidden="true">
@@ -413,12 +424,12 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="player-next">
+                    <div class="player-next js-audio-next">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-next-icon">
                             <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path>
                         </svg>
                     </div>
-                    <div class="player-next-15s">
+                    <div class="player-next-15s js-audio-next-15s">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
                             <path
                                 d="M6 5h4v1.5l3.464-2L10 2.5V4H6C3.25 4 1 6.25 1 9s2.25 5 5 5v-1c-2.206 0-4-1.794-4-4s1.794-4 4-4zm1.935 3.739a1.306 1.306 0 01-.32.332c-.13.096-.281.172-.451.228a1.956 1.956 0 01-.562.092v.752h1.36v3.856h1.096V8.327h-.96c-.026.15-.08.287-.163.412zm6.139 2.628a1.664 1.664 0 00-.399-.592 1.747 1.747 0 00-.612-.368 2.295 2.295 0 00-.78-.128c-.191 0-.387.03-.584.092-.197.061-.357.15-.479.268l.327-1.352h2.376v-.96h-3.128l-.688 2.872c.037.016.106.041.204.076l.308.108.309.108.212.076c.096-.112.223-.206.38-.28.157-.075.337-.112.54-.112.133 0 .264.021.392.064a.97.97 0 01.336.188.907.907 0 01.233.316c.058.128.088.274.088.44a.941.941 0 01-.3.721.995.995 0 01-.328.196 1.19 1.19 0 01-.404.068c-.16 0-.306-.025-.436-.076a1.03 1.03 0 01-.569-.532 1.171 1.171 0 01-.1-.4l-1.04.248c.02.224.086.439.195.644.109.205.258.388.444.548.186.16.406.287.66.38.253.093.534.14.844.14.336 0 .636-.052.9-.156.264-.104.487-.245.672-.424.184-.179.325-.385.424-.62a1.91 1.91 0 00.148-.752c0-.3-.049-.566-.145-.801z">
@@ -427,16 +438,23 @@
                     </div>
                 </div>
                 <div class="player-time-control">
-                    <span class="song-currenttime">0:00</span>
-                    <input type="range" id="js-song-range" class="player-time-range" value="0" step="1" min="0"
+                    <span class="song-currenttime js-song-currenttime">00:00</span>
+                    <input type="range" id="js-song-range" class="player-time-range" value="0" step="0.005" min="0"
                         max="100">
-                    <span class="song-duration">2:36</span>
+                    <span class="song-duration js-song-duration">
+                        <span class="audio-duration-minutes"></span>:
+                        <span class="audio-duration-seconds"></span>
+                    </span>
                 </div>
+            </div>
+
+            <!-- Toast -->
+            <div id="toast">
             </div>
         </div>
 
         <!-- Javascript -->
-        <script src="/javascript/podcast/podcast.js"></script>
+        <script type="module" src="/javascript/podcast/podcast.js"></script>
 </body>
 
 </html>

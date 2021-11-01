@@ -94,10 +94,10 @@ body{
 .song-pause-icon{
     display: none;
 }
-.js-song-play-btn.playing .song-play-icon{
+.js-audio-play-btn.playing .song-play-icon{
     display: none;
 }
-.js-song-play-btn.playing .song-pause-icon{
+.js-audio-play-btn.playing .song-pause-icon{
     display: block;
 }
 

@@ -381,9 +381,10 @@
 .recommended-playlist-name,
 .popular-playlist-name{
     font-size: 1.6rem;
-    line-height: 100%;
+    line-height: 1.5;
     font-weight: 500;
-    margin: 16px 16px 10px 16px;
+    height: 22px;
+    margin: 8px 16px 8px 16px;
 }
 .recommended-playlist-author,
 .popular-playlist-author{

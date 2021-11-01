@@ -51,14 +51,20 @@ export function clickOpenEvents(userElement, playlistElement, songElement) {
 export function headerScroll(header, headerPlayBtn, headerPlaylistName) {
     document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        header.style.opacity = scrollTop / 250;
+        console.log(scrollTop)
 
-        if (header.style.opacity >= 1) {
+        if (scrollTop >= 180) {
+            header.style.opacity = 1;
+        } else {
+            header.style.opacity = 0;
+        }
+
+        if (scrollTop >= 285) {
             headerPlayBtn.style.opacity = 1;
             setTimeout(() => {
                 headerPlaylistName.style.opacity = 1;
             }, 150);
-        } else if (header.style.opacity < 1) {
+        } else {
             headerPlayBtn.style.opacity = 0;
             setTimeout(() => {
                 headerPlaylistName.style.opacity = 0;
