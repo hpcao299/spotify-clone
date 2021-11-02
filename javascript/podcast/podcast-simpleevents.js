@@ -16,7 +16,6 @@ export function playlistDescriptionOpenOptions(playlistDesElement, seeMoreBtn, s
 export function headerScroll(header, headerPlaylistName) {
     document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        console.log(scrollTop)
         if (scrollTop >= 230) {
             header.style.opacity = 1;
         } else {
@@ -64,4 +63,18 @@ export function clickOpenEvents(userElement, playlistElement) {
             playlistIsOpen = false;
         }
     }
+}
+
+// Prevent Default Event Of Spacebar
+export function preventNormalSpaceEvent() {
+    document.addEventListener("keydown", function (event) {
+        if (
+            ['input', 'textarea', 'select', 'button']
+                .indexOf(document.activeElement.tagName.toLowerCase()) == -1
+        ) {
+            event.preventDefault();
+        } else {
+
+        }
+    })
 }

@@ -1,7 +1,8 @@
 import {
     playlistDescriptionOpenOptions,
     headerScroll,
-    clickOpenEvents
+    clickOpenEvents,
+    preventNormalSpaceEvent
 } from './podcast-simpleevents.js';
 
 import {
@@ -50,5 +51,8 @@ function start() {
 
     // Audio Events
     audioEvents();
+
+    // Prevent Default Event Of Spacebar
+    preventNormalSpaceEvent();
 }
 start();

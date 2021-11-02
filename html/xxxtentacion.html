@@ -92,14 +92,37 @@
 
             <ul class="sidebar__playlist-list">
                 <li class="sidebar__playlist-item active">
-                    <a href="#" class="sidebar__playlist-link word-1-line">This Is XXXTENTACION</a>
+                    <a href="#" class="sidebar__playlist-link word-1-line">
+                        <span>This Is XXXTENTACION</span>
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
+                            fill="#B3B3B3">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                    </a>
                 </li>
                 <li class="sidebar__playlist-item">
-                    <a href="/html/indieViet.html" class="sidebar__playlist-link word-1-line">Indie Việt 2020</a>
+                    <a href="/html/indieViet.html" class="sidebar__playlist-link word-1-line">
+                        <span>Indie Việt 2020</span>
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
+                            fill="#B3B3B3">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                    </a>
                 </li>
                 <li class="sidebar__playlist-item">
-                    <a href="/html/vietnamHotHits.html" class="sidebar__playlist-link word-1-line">Vietnam Hot Hits
-                        2020</a>
+                    <a href="/html/vietnamHotHits.html" class="sidebar__playlist-link word-1-line">
+                        <span>Vietnam Hot Hits 2020</span>
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
+                            fill="#B3B3B3">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                    </a>
                 </li>
             </ul>
 
@@ -131,9 +154,16 @@
                 </div>
 
                 <div class="header__play-button-wrapper">
-                    <button class="play-btn header__play-btn js-header-play-btn">
-                        <svg height="16" role="img" width="16" viewBox="0 0 24 24" aria-hidden="true">
-                            <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)"></polygon>
+                    <button class="play-btn header__play-btn flex-center js-audio-play-btn js-header-play-btn">
+                        <svg class="song-play-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
+                            </polygon>
+                        </svg>
+                        <svg class="song-pause-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect x="5" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                            <rect x="15" y="3" width="4" height="18" fill="var(--white-color)"></rect>
                         </svg>
                     </button>
                     <h2 class="header__playlist-name js-header-playlist-name">This Is XXXTENTACION</h2>
@@ -197,8 +227,7 @@
 
             <!-- Playlist Info -->
             <div class="playlist__info">
-                <img src="/assets/image/recent-playlist/XXXTENTACION-playlist.jpeg" alt="This Is XXXTENTACION"
-                    class="playlist__thumb">
+                <img src="/assets/image/recent-playlist/XXXTENTACION-playlist.jpeg" alt="" class="playlist__thumb">
                 <div class="playlist__content">
                     <h1 class="playlist__type">Playlist</h1>
                     <h2 class="playlist__name">This Is XXXTENTACION</h2>
@@ -213,7 +242,7 @@
             <!-- Playlist Options -->
             <div class="playlist-options-wrapper js-playlist-options-wrapper">
                 <div class="playlist__option">
-                    <button class="play-btn flex-center playlist__play-btn js-song-play-btn">
+                    <button class="play-btn flex-center playlist__play-btn js-audio-play-btn">
                         <svg class="song-play-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
                             aria-hidden="true">
                             <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
@@ -297,104 +326,14 @@
 
                 <!-- Songs List -->
                 <div class="songs-list">
-                    <div class="song">
-                        <div class="song-number">
-                            <h2>1</h2>
-                            <div class="song-play-btn">
-                                <svg height="16" role="img" width="16" viewBox="0 0 24 24"
-                                    style="transform: translateX(-3px)">
-                                    <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
-                                    </polygon>
-                                </svg>
-                            </div>
-                            <div class="song-play-playing">
-                                <img src="/assets/image/playing.gif" alt="" style="width: 14px; height: 14px;">
-                            </div>
-                        </div>
-                        <div class="song-info">
-                            <img src="/assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg" alt=""
-                                class="song-playlist-thumb">
-                            <div class="song-content">
-                                <h2 class="song-name" style="line-height: 100%;">
-                                    <a href="#" class="js-non-updated-info">changes</a>
-                                </h2>
-                                <div class="song-des">
-                                    <span class="song-type flex-center">
-                                        <span>E</span>
-                                    </span>
-                                    <h3 class="song-author">
-                                        <a href="#" class="js-non-updated-info">XXXTENTACION</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="song-album">
-                            <h2>
-                                <a href="#" class="js-non-updated-info">?</a>
-                            </h2>
-                        </div>
-                        <div class="song-date-added">
-                            <h2>Sep 22, 2018</h2>
-                        </div>
-                        <div class="song-duration">
-                            <div class="song-liked js-liked-btn song-list-liked">
-                                <svg class="song-unliked-icon" fill="var(--white-color)" role="img" height="16"
-                                    width="16" viewBox="0 0 16 16">
-                                    <path
-                                        d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z">
-                                    </path>
-                                </svg>
-                                <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="song-liked-icon"
-                                    fill="#1BB954">
-                                    <path fill="none" d="M0 0h16v16H0z"></path>
-                                    <path
-                                        d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <h2>2:46</h2>
-                            <div class="song-options js-song-options-btn">
-                                <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
-                                    <path
-                                        d="M2 6.5a1.5 1.5 0 10-.001 2.999A1.5 1.5 0 002 6.5zm6 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm6 0a1.5 1.5 0 10-.001 2.999A1.5 1.5 0 0014 6.5z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                        <ul class="song-options-list">
-                            <li class="song-options-item js-no-supported song-options-item--separate">Add to queue</li>
-                            <li class="song-options-item js-no-supported">Go to song audio</li>
-                            <li class="song-options-item js-no-supported">Go to artist</li>
-                            <li class="song-options-item js-no-supported">Go to album</li>
-                            <li class="song-options-item js-no-supported song-options-item--separate">Show credits</li>
-                            <li class="song-options-item js-no-supported">Save to your Liked Songs</li>
-                            <li class="song-options-item song-options-item--separate song-options-item--more-options">
-                                <span>Add to playlist</span>
-                                <svg role="img" height="16" width="16" fill="var(--white-color)" viewBox="0 0 16 16"
-                                    style="transform: rotate(90deg)">
-                                    <path d="M13 10L8 4.206 3 10z"></path>
-                                </svg>
-                                <ul class="song-more-options-list">
-                                    <li class="song-more-options-item js-no-supported">Add to new playlist</li>
-                                </ul>
-                            </li>
-                            <li class="song-options-item song-options-item--separate song-options-item--more-options">
-                                <span>Share</span>
-                                <svg role="img" height="16" width="16" fill="var(--white-color)" viewBox="0 0 16 16"
-                                    style="transform: rotate(90deg)">
-                                    <path d="M13 10L8 4.206 3 10z"></path>
-                                </svg>
-                                <ul class="song-more-options-list">
-                                    <li class="song-more-options-item js-no-supported">Copy Song Link</li>
-                                    <li class="song-more-options-item js-no-supported">Embed track</li>
-                                </ul>
-                            </li>
-                            <li class="song-options-item js-no-supported">Open in Desktop app</li>
-                        </ul>
-                    </div>
+
                 </div>
+
+                <!-- Audio -->
+                <audio src="/assets/audio/xxxtentacion/xxxtentacion_everybody_dies_in_their_nightmares_audio_230653.mp3"
+                    id="audio"></audio>
+
             </div>
-            <audio src="/assets/audio/xxxtentacion/xxxtentacion_changes_403261052602592536.mp3" id="audio"></audio>
         </div>
 
         <!-- Play Songs Control -->
@@ -474,19 +413,19 @@
             <!-- Player Control -->
             <div class="player-control">
                 <div class="player-control-wrapper">
-                    <div class="player-shuffle">
+                    <div class="player-shuffle js-audio-shuffle">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-shuffle-icon">
                             <path
                                 d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z">
                             </path>
                         </svg>
                     </div>
-                    <div class="player-previous">
+                    <div class="player-previous js-audio-previous">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-previous-icon">
                             <path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path>
                         </svg>
                     </div>
-                    <div class="player-play js-song-play-btn">
+                    <div class="player-play js-audio-play-btn">
                         <button class="play-btn flex-center player-play-icon-wrapper">
                             <svg class="song-play-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
                                 aria-hidden="true">
@@ -499,12 +438,12 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="player-next">
+                    <div class="player-next js-audio-next">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-next-icon">
                             <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path>
                         </svg>
                     </div>
-                    <div class="player-repeat">
+                    <div class="player-repeat js-audio-repeat">
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-repeat-icon">
                             <path
                                 d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z">
@@ -513,10 +452,13 @@
                     </div>
                 </div>
                 <div class="player-time-control">
-                    <span class="song-currenttime">0:00</span>
+                    <span class="song-currenttime js-song-currenttime">00:00</span>
                     <input type="range" id="js-song-range" class="player-time-range" value="0" step="1" min="0"
                         max="100">
-                    <span class="song-duration">2:36</span>
+                    <span class="song-duration js-song-duration">
+                        <span class="audio-duration-minutes"></span>:
+                        <span class="audio-duration-seconds"></span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -528,6 +470,45 @@
     </div>
     <!-- Javascript -->
     <script type="module" src="/javascript/playlist/playlist.js"></script>
+    <script>
+        const songs = [
+            {
+                name: 'changes',
+                singer: 'XXXTENTACION',
+                album: '?',
+                path: '/assets/audio/xxxtentacion/xxxtentacion_changes_403261052602592536.mp3',
+                image: '/assets/image/xxxtentacion-playlist/second-album.jpeg',
+            },
+            {
+                name: 'Look At Me!',
+                singer: 'XXXTENTACION',
+                album: 'Look At Me!',
+                path: '/assets/audio/xxxtentacion/xxxtentacion_look_at_me_audio_5989515464412111102.mp3',
+                image: '/assets/image/xxxtentacion-playlist/sad-boy-thumb.jpeg',
+            },
+            {
+                name: 'Jocelyn Flores',
+                singer: 'XXXTENTACION',
+                album: '17',
+                path: '/assets/audio/xxxtentacion/xxxtentacion_jocelyn_flores_audio_-104964372193056183.mp3',
+                image: '/assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg',
+            },
+            {
+                name: 'Moonlight',
+                singer: 'XXXTENTACION',
+                album: '?',
+                path: '/assets/audio/xxxtentacion/xxxtentacion_moonlight_official_music_video_-3111554498040548494.mp3',
+                image: '/assets/image/xxxtentacion-playlist/second-album.jpeg',
+            },
+            {
+                name: 'Everybody Dies In Their Nightmares',
+                singer: 'XXXTENTACION',
+                album: '17',
+                path: '/assets/audio/xxxtentacion/xxxtentacion_everybody_dies_in_their_nightmares_audio_230653.mp3',
+                image: '/assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg',
+            },
+        ]
+    </script>
 </body>
 
 </html>

@@ -79,18 +79,8 @@ function renderDuration() {
     var audioDurationMinutes = (audio.duration / 60);
     audioDuration.querySelector('.audio-duration-minutes').innerText = Math.floor(audioDurationMinutes);
 
-    var audioDurationSeconds = parseInt((audioDurationMinutes % 1).toFixed(2).substring(2));
-    audioDuration.querySelector('.audio-duration-seconds').innerText = audioDurationSeconds;
-}
-
-// Next / Previous 15s Click Btn Events
-function nextPrevious15sEvents() {
-    next15sBtn.onclick = function () {
-        audio.currentTime = audio.currentTime + 15;
-    }
-    previous15sBtn.onclick = function () {
-        audio.currentTime = audio.currentTime - 15;
-    }
+    var audioDurationSeconds = (audioDurationMinutes + "").split(".")[1];
+    audioDuration.querySelector('.audio-duration-seconds').innerText = audioDurationSeconds.slice(0, 2);
 }
 
 // Get Audio Current Time & Render
@@ -105,8 +95,19 @@ function renderCurrTime() {
         sec = Math.floor(sec % 60);
         sec = sec >= 10 ? sec : '0' + sec;
 
+        console.log(`${min}:${sec}`);
         audioCurrentTime.innerText = `${min}:${sec}`;
     })
+}
+
+// Next / Previous 15s Click Btn Events
+function nextPrevious15sEvents() {
+    next15sBtn.onclick = function () {
+        audio.currentTime = audio.currentTime + 15;
+    }
+    previous15sBtn.onclick = function () {
+        audio.currentTime = audio.currentTime - 15;
+    }
 }
 
 // Keyboard Typing Events
@@ -126,6 +127,11 @@ function keyboardEvents() {
         // Previous 15s
         if (x == 37) {
             previous15sBtn.click();
+        }
+
+        // Mute
+        if (x == 77) {
+            volumeIconWrapper.click();
         }
     });
 }

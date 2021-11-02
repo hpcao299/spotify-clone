@@ -15,7 +15,7 @@ import {
     clickOpenEvents,
     headerScroll,
     playlistLikeClickEvent,
-    songLikeClickEvent
+    preventNormalSpaceEvent
 } from './playlist-simpleevents.js';
 
 import {
@@ -23,9 +23,14 @@ import {
     showNonUpdatedInfo
 } from '../toast.js';
 
+import audioEvents from './playlist-audio.js'
+
 // //////////////////////////////////////////////////////////////////
 
 function start() {
+    // Audio Events
+    audioEvents(songs);
+
     // Header Scroll Events
     headerScroll(headerElement, headerPlayBtn, headerPlaylistName);
 
@@ -43,14 +48,15 @@ function start() {
         }
     })
 
-    // Song Like Button Click Events
-    songLikeClickEvent(songLikeBtns);
-
     // Playlist Like Button Click Event
     playlistLikeClickEvent(playlistLikeBtn);
 
 
     // Click Events
     clickOpenEvents(userOptionElement, playlistOptionWrapper, songElement);
+
+    // Prevent Default Event Of Spacebar
+    preventNormalSpaceEvent();
+
 };
 start();

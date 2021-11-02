@@ -184,7 +184,7 @@
 }
 .header__page-button.disabled{
     opacity: 0.6;
-    cursor: default;
+    cursor: not-allowed;
 }
 .header__page-button-icon{
     color: var(--white-color);

@@ -1,7 +1,6 @@
 export function clickOpenEvents(userElement, playlistElement, songElement) {
     var userIsOpen = false;
     var playlistIsOpen = false;
-    var songIsOpen = false;
     document.onclick = function (e) {
         // User Options Click Events
         if (e.target.closest('.js-user-btn')) {
@@ -30,20 +29,6 @@ export function clickOpenEvents(userElement, playlistElement, songElement) {
             playlistElement.classList.remove('open');
             playlistIsOpen = false;
         }
-
-        // Song Options Click Events
-        if (e.target.closest('.js-song-options-btn')) {
-            if (songIsOpen) {
-                songElement.classList.remove('open');
-                songIsOpen = false;
-            } else {
-                songElement.classList.add('open');
-                songIsOpen = true;
-            }
-        } else if (songIsOpen) {
-            songElement.classList.remove('open');
-            songIsOpen = false;
-        }
     }
 }
 
@@ -51,7 +36,6 @@ export function clickOpenEvents(userElement, playlistElement, songElement) {
 export function headerScroll(header, headerPlayBtn, headerPlaylistName) {
     document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        console.log(scrollTop)
 
         if (scrollTop >= 180) {
             header.style.opacity = 1;
@@ -80,17 +64,17 @@ export function playlistLikeClickEvent(playlistButtonElement) {
         if (playlistIsLike) {
             playlistButtonElement.classList.remove('active');
             playlistIsLike = false;
-            likeNoti('Bỏ thích playlist thành công');
+            likeNoti('Bạn đã bỏ thích playlist');
         } else {
             playlistButtonElement.classList.add('active');
             playlistIsLike = true;
-            likeNoti('Thích playlist thành công');
+            likeNoti('Bạn đã thêm thích playlist');
         }
     }
 }
 
 // Notifications when click playlist / songs liked button
-function likeNoti(message) {
+export function likeNoti(message) {
     const main = document.querySelector('.like-notifications-wrapper');
     if (main) {
         const wrapper = document.createElement('div')
@@ -107,21 +91,34 @@ function likeNoti(message) {
     }
 }
 
-// Song Like Button Click Event
-export function songLikeClickEvent(songButtonElements) {
-    var songIsLike = false;
-    songButtonElements.forEach(function (element) {
-        element.onclick = function () {
-            if (songIsLike) {
-                songIsLike = false;
-                element.classList.add('active');
-                likeNoti('Thích bài hát thành công')
+export function closeOpenSongOptions(songElement) {
+    var songIsOpen = false;
+    document.onclick = function (e) {
+        if (e.target.closest('.js-song-options-btn')) {
+            if (songIsOpen) {
+                songElement.classList.remove('open');
+                songIsOpen = false;
             } else {
-                songIsLike = true;
-                element.classList.remove('active');
-                likeNoti('Bỏ thích bài hát thành công')
+                songElement.classList.add('open');
+                songIsOpen = true;
             }
+        } else if (songIsOpen) {
+            songElement.classList.remove('open');
+            songIsOpen = false;
+        }
+    }
+}
+
+// Prevent Default Event Of Spacebar
+export function preventNormalSpaceEvent() {
+    window.addEventListener("keydown", function (event) {
+        if (
+            ['input', 'textarea', 'select', 'button']
+                .indexOf(document.activeElement.tagName.toLowerCase()) == -1
+        ) {
+            event.preventDefault();
+        } else {
+
         }
     })
 }
-
