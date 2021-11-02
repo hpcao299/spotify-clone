@@ -16,14 +16,14 @@ export function playlistDescriptionOpenOptions(playlistDesElement, seeMoreBtn, s
 export function headerScroll(header, headerPlaylistName) {
     document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-        if (scrollTop >= 250) {
+        console.log(scrollTop)
+        if (scrollTop >= 230) {
             header.style.opacity = 1;
         } else {
             header.style.opacity = 0;
         }
 
-        if (scrollTop >= 350) {
+        if (scrollTop >= 318) {
             headerPlaylistName.style.opacity = 1;
         } else {
             headerPlaylistName.style.opacity = 0;

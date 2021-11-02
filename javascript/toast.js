@@ -53,6 +53,14 @@ export function showNonUpdatedMessage() {
     })
 }
 
+export function showNonUpdatedPlaylistMessage() {
+    toast({
+        title: 'Thông báo',
+        message: 'Website chưa cập nhật playlist này.',
+        type: 'jsNonUpdated'
+    })
+}
+
 export function showNonSupportedMessage() {
     toast({
         title: 'Thông báo',

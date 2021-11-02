@@ -117,3 +117,67 @@
     border-bottom: 1px solid #3e3e3e;
     border-top: none;
 }
+
+/* Recommended Radio */
+.recommended-radio{
+    padding: 0 32px;
+}
+.recommended-radio h1{
+    font-size: 2.4rem;
+    color: var(--white-color);
+    line-height: 100%;
+    margin: 22px 0;
+}
+.recommended-radio-wrapper{
+    display: flex;
+    gap: 16px;
+}
+.recommended-radio-box{
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    flex: 1;
+    transition: background linear .2s;
+}
+.recommended-radio-box:hover{
+    background-color: rgb(40,40,40);
+}
+.recommended-radio-images-wrapper{
+    margin: 16px 16px 20px;
+}
+.recommended-radio-thumb{
+    height: 142px;
+    width: 142px;
+    border-radius: 2px;
+}
+.recommended-radio-logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    position: absolute;
+    left: 7px;
+    bottom: 77px;
+}
+.recommended-radio-info{
+    padding: 0 16px;
+}
+.recommended-radio-name{
+    font-size: 1.6rem;
+    color: var(--white-color);
+    line-height: 100%;
+    margin: 0;
+    height: 22px;
+    line-height: 1.6;
+}
+.recommended-radio-date-time{
+    font-size: 12px;
+    color: rgb(179, 179, 179);
+    letter-spacing: 1px;
+    margin: 10px 0 30px;
+}
+.recommended-radio-date{
+
+}
+.recommended-radio-time{
+
+}
