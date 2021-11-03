@@ -33,7 +33,7 @@ export function clickOpenEvents(userElement, playlistElement, songElement) {
 }
 
 // Header Scroll Events
-export function headerScroll(header, headerPlayBtn, headerPlaylistName) {
+export function headerScroll(header, headerPlayBtn, headerPlaylistName, contentBackgroundImage, contentBackgroundColor) {
     document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -53,6 +53,10 @@ export function headerScroll(header, headerPlayBtn, headerPlaylistName) {
             setTimeout(() => {
                 headerPlaylistName.style.opacity = 0;
             }, 150);
+        }
+
+        if (contentBackgroundImage && contentBackgroundColor) {
+
         }
     }
 }

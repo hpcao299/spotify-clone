@@ -26,6 +26,7 @@ const PLAYER_STORAGE_KEY = 'SPOTIFY_PLAYER'
 // //////////////////////////////////////////////////////////////////////////
 export default function audioEvents(songs) {
     const app = {
+        date: date,
         songs: songs,
         currentVolume: 1,
         isMute: false,
@@ -78,7 +79,9 @@ export default function audioEvents(songs) {
                                     <span>E</span>
                                 </span>
                                 <h3 class="song-author">
-                                    <a href="#" class="js-non-updated-info">${song.singer}</a>
+                                    <a href="#" class="js-non-updated-info">${song.singer2 ? song.singer + ',' : song.singer}</a>
+                                    <a href="#" class="js-non-updated-info">${app.checkSinger2(song.singer2, song.singer3)}</a>
+                                    <a href="#" class="js-non-updated-info">${song.singer3 ? song.singer3 : ''}</a>
                                 </h3>
                             </div>
                         </div>
@@ -89,7 +92,7 @@ export default function audioEvents(songs) {
                         </h2>
                     </div>
                     <div class="song-date-added">
-                        <h2>Sep 22, 2018</h2>
+                        <h2>${date}</h2>
                     </div>
                     <div class="song-duration">
                         <div class="song-liked js-liked-btn song-list-liked">
@@ -107,7 +110,7 @@ export default function audioEvents(songs) {
                                 </path>
                             </svg>
                         </div>
-                        <h2>2:46</h2>
+                        <h2>${song.render}</h2>
                         <div class="song-options js-song-options-btn">
                             <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
                                 <path
@@ -151,13 +154,34 @@ export default function audioEvents(songs) {
             })
             songPlaylist.innerHTML = htmls.join('');
         },
-        // Render Duration
+        checkSinger2: function (singer2, singer3) {
+            if (singer2) {
+                if (singer3) {
+                    return singer2 + ','
+                } else {
+                    return singer2
+                }
+            } else {
+                return '';
+            }
+        },
+        // Render Duration On Player
         renderDuration: function () {
-            var audioDurationMinutes = (audio.duration / 60);
-            audioDuration.querySelector('.audio-duration-minutes').innerText = Math.floor(audioDurationMinutes);
+            audio.onloadedmetadata = function () {
+                var convertTime = function (time) {
+                    var mins = Math.floor(time / 60);
+                    if (mins < 10) {
+                        mins = '0' + String(mins);
+                    }
+                    var secs = Math.floor(time % 60);
+                    if (secs < 10) {
+                        secs = '0' + String(secs);
+                    }
 
-            var audioDurationSeconds = (audioDurationMinutes + "").split(".")[1];
-            audioDuration.querySelector('.audio-duration-seconds').innerText = audioDurationSeconds.slice(0, 2);
+                    return mins + ':' + secs;
+                }
+                audioDuration.innerText = convertTime(audio.duration);
+            };
         },
         renderCurrTime: function () {
             audio.addEventListener('timeupdate', (event) => {
@@ -295,6 +319,7 @@ export default function audioEvents(songs) {
             // When Click On Song
             songList.onclick = function (e) {
                 const song = e.target.closest('.song');
+                const songActive = e.target.closest('.song.active');
                 const songNode = e.target.closest('.song:not(.active)');
                 const songOptions = e.target.closest('.song-options');
                 const songLikeBtn = e.target.closest('.js-liked-btn');
@@ -362,10 +387,13 @@ export default function audioEvents(songs) {
             this.loadCurrentSong();
         },
         playRandomSong: function () {
+            var playedSong = [];
             let newIndex;
+
             do {
                 newIndex = Math.floor(Math.random() * this.songs.length);
             } while (this.currentIndex === newIndex);
+
             this.currentIndex = newIndex;
             this.loadCurrentSong();
         },

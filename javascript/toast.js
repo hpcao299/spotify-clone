@@ -76,3 +76,19 @@ export function showNonUpdatedInfo() {
         type: 'jsNonUpdated'
     })
 }
+
+export function showNonUpdatedSearchFeature() {
+    toast({
+        title: 'Thông báo',
+        message: 'Website chưa phát triển tính năng tìm kiếm.',
+        type: 'jsNonSupported'
+    })
+}
+
+export function showNonUpdatedGenres() {
+    toast({
+        title: 'Thông báo',
+        message: 'Website chưa cập nhật thể loại này.',
+        type: 'jsNonUpdated'
+    })
+}

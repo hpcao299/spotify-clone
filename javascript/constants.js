@@ -68,3 +68,7 @@ export const audioDuration = $('.js-song-duration');
 export const songThumb = $('.player-song-thumb');
 export const songName = $('.player-song-name a');
 export const songAuthor = $('.player-song-author a');
+
+// Content Background Image & Content Background Color
+export const contentBackgroundImage = $('.js-background-image');
+export const contentBackgroundColor = $('.js-background-color');

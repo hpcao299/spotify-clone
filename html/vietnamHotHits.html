@@ -5,11 +5,561 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Vietname Hot Hits</title>
+    <title>Spotify - Hot Hits Vietnam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/music-playlist.css">
+    <link rel="stylesheet" href="/assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 
 <body>
+    <div id="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="/index.html" class="sidebar__logo-link">
+                <svg viewBox="0 0 1134 340" class="sidebar__logo-img">
+                    <title>Spotify</title>
+                    <path fill="#fff"
+                        d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z">
+                    </path>
+                </svg>
+            </a>
 
+            <!-- Sidebar List -->
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="/index.html" class="sidebar__item-link">
+                        <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
+                            <path d="M9 14h6v7h5V7.8l-8-4.6-8 4.6V21h5v-7zm1 8H3V7.2L12 2l9 5.2V22h-7v-7h-4v7z"></path>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item js-no-supported">
+                    <a href="#" class="sidebar__item-link">
+                        <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
+                            <path
+                                d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z">
+                            </path>
+                        </svg>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="sidebar__item js-no-supported">
+                    <a href="#" class="sidebar__item-link">
+                        <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
+                            <path
+                                d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z">
+                            </path>
+                        </svg>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="spacer" style="margin-top: 26px;"></div>
+
+            <ul class="sidebar__list sidebar__list--border-bottom js-no-supported">
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__item-link">
+                        <div class="sidebar__img-wrapper flex-center sidebar__img-wrapper-create-playlist">
+                            <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-1bi12j5-0 gSLhUO">
+                                <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                                <path fill="none" d="M0 0h16v16H0z"></path>
+                            </svg>
+                        </div>
+                        <span>Create Playlist</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__item-link">
+                        <div class="sidebar__img-wrapper flex-center sidebar__img-wrapper-liked-songs">
+                            <svg role="img" height="12" width="12" fill="#fff" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-1bi12j5-0 gSLhUO">
+                                <path fill="none" d="M0 0h16v16H0z"></path>
+                                <path
+                                    d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="sidebar__playlist-list">
+                <li class="sidebar__playlist-item">
+                    <a href="#" class="sidebar__playlist-link word-1-line">
+                        <span>This Is XXXTENTACION</span>
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
+                            fill="#B3B3B3">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="sidebar__playlist-item">
+                    <a href="/html/indieViet.html" class="sidebar__playlist-link word-1-line">
+                        <span>Indie Việt 2020</span>
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
+                            fill="#B3B3B3">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="sidebar__playlist-item active">
+                    <a href="/html/vietnamHotHits.html" class="sidebar__playlist-link word-1-line">
+                        <span>Hot Hits Vietnam</span>
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
+                            fill="#B3B3B3">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar__install">
+                <a href="https://open.spotify.com/download" class="sidebar__install-link">
+                    <svg role="img" height="24" width="24" viewBox="0 0 24 24" class="sidebar__install-link-img">
+                        <path
+                            d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1 22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652 4.678 5.44 4.694-5.439-.757-.653-3.439 3.984z">
+                        </path>
+                    </svg>
+                    <span>Install App</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="content">
+            <!-- Content Header -->
+            <div class="content__gradient js-background-image" style="background-image: url(../assets/image/hot-hits-vietnam-playlist/background-img.jpeg); background-position: 50% 15%;
+                background-repeat: no-repeat; position: fixed; top: 0; left: 0; right: 0;
+                background-size: cover; transform: scale(1.1); opacity: 0.7;">
+            </div>
+            <div class="content__gradient-bonus-2 js-background-color"
+                style="background-color: #511336; background-image: none; opacity: 0;"></div>
+            <div class="content__gradient-bonus" style="background-color: rgb(200, 48, 136);"></div>
+            <header class="content__header" style="background-color: #501536;"></header>
+            <nav class="header__nav">
+                <div class="header__page-button-wrapper">
+                    <button class="header__page-button flex-center" onclick="location.href='/index.html'">
+                        <i class="header__page-button-icon ti-angle-left"></i>
+                    </button>
+                    <button class="header__page-button flex-center disabled">
+                        <i class="header__page-button-icon ti-angle-right"></i>
+                    </button>
+                </div>
+
+                <div class="header__play-button-wrapper">
+                    <button class="play-btn header__play-btn flex-center js-audio-play-btn js-header-play-btn">
+                        <svg class="song-play-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
+                            </polygon>
+                        </svg>
+                        <svg class="song-pause-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect x="5" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                            <rect x="15" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                        </svg>
+                    </button>
+                    <h2 class="header__playlist-name js-header-playlist-name">Hot Hits Vietnam</h2>
+                </div>
+
+                <div class="header__info">
+                    <button type="submit" class="btn header__btn--upgrade"
+                        onclick="location.href='https://www.spotify.com/us/premium/'">Upgrade</button>
+                    <button class="header__user-btn js-user-btn">
+                        <img src="/assets/image/avatar.jpeg" alt="" class="header__avatar">
+                        <span class="header__name">phuc.cao2909</span>
+                        <div class="header__avatar-wrapper">
+                            <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--down"
+                                viewBox="0 0 16 16">
+                                <path d="M3 6l5 5.794L13 6z"></path>
+                            </svg>
+                            <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--up"
+                                viewBox="0 0 16 16">
+                                <path d="M13 10L8 4.206 3 10z"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Header User Options -->
+                        <ul class="header__user-option-list">
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Account</span>
+                                    <svg role="img" height="16" width="16" viewBox="0 0 16 16"
+                                        class="header__user-option-img">
+                                        <path fill-rule="evenodd"
+                                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Upgrade to Premium</span>
+                                    <svg role="img" height="16" width="16" viewBox="0 0 16 16"
+                                        class="header__user-option-img">
+                                        <path fill-rule="evenodd"
+                                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__user-option-item">
+                                <a href="#" class="header__user-option-link js-no-supported">
+                                    <span>Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Playlist Info -->
+            <div class="playlist__info">
+                <div class="playlist__content" style="height: 230px">
+                    <h1 class="playlist__type">Playlist</h1>
+                    <h2 class="playlist__name" style="font-size: 9.6rem;">Hot Hits Vietnam</h2>
+                    <h3 class="playlist__des">Đông tới Tây, đây là những ca khúc thịnh hành nhất ở Việt Nam. Ảnh bìa: DJ
+                        Snake, Ozuna, Megan Thee Stallion, LISA</h3>
+                    <div class="playlist__more-info">
+                        <a href="#" class="js-non-updated-info">Spotify</a>
+                        <p class="playlist__view-songs-duration">114,976 likes, 54 songs, 3 hr 24 min</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Options -->
+            <div class="playlist-options-wrapper js-playlist-options-wrapper">
+                <div class="playlist__option">
+                    <button class="play-btn flex-center playlist__play-btn js-audio-play-btn">
+                        <svg class="song-play-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--white-color)">
+                            </polygon>
+                        </svg>
+                        <svg class="song-pause-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect x="5" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                            <rect x="15" y="3" width="4" height="18" fill="var(--white-color)"></rect>
+                        </svg>
+                    </button>
+                    <div class="playlist-liked js-playlist-like-btn">
+                        <svg role="img" height="32" width="32" viewBox="0 0 32 32" fill="var(--white-color)"
+                            class="playlist-unliked-icon">
+                            <path
+                                d="M27.672 5.573a7.904 7.904 0 00-10.697-.489c-.004.003-.425.35-.975.35-.564 0-.965-.341-.979-.354a7.904 7.904 0 00-10.693.493A7.896 7.896 0 002 11.192c0 2.123.827 4.118 2.301 5.59l9.266 10.848a3.196 3.196 0 004.866 0l9.239-10.819A7.892 7.892 0 0030 11.192a7.896 7.896 0 00-2.328-5.619zm-.734 10.56l-9.266 10.848c-.837.979-2.508.979-3.346 0L5.035 16.104A6.9 6.9 0 013 11.192 6.9 6.9 0 015.035 6.28a6.935 6.935 0 014.913-2.048 6.89 6.89 0 014.419 1.605A2.58 2.58 0 0016 6.434c.914 0 1.555-.53 1.619-.585a6.908 6.908 0 019.346.431C28.277 7.593 29 9.337 29 11.192s-.723 3.6-2.062 4.941z">
+                            </path>
+                        </svg>
+                        <svg role="img" height="32" width="32" viewBox="0 0 32 32" fill="#1BB954"
+                            class="playlist-liked-icon">
+                            <path
+                                d="M27.319 5.927a7.445 7.445 0 00-10.02-.462s-.545.469-1.299.469c-.775 0-1.299-.469-1.299-.469a7.445 7.445 0 00-10.02 10.993l9.266 10.848a2.7 2.7 0 004.106 0l9.266-10.848a7.447 7.447 0 000-10.531z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="playlist-options js-playlist-options-btn">
+                        <svg role="img" height="32" width="32" viewBox="0 0 32 32" fill="var(--white-color)">
+                            <path
+                                d="M5.998 13.999A2 2 0 105.999 18a2 2 0 00-.001-4zm10.001 0A2 2 0 1016 18a2 2 0 000-4zm10.001 0A2 2 0 1026.001 18 2 2 0 0026 14z">
+                            </path>
+                        </svg>
+
+                    </div>
+                </div>
+
+                <ul class="playlist-options-list">
+                    <li class="playlist-options-item js-no-supported">Add to queue</li>
+                    <li class="playlist-options-item js-no-supported">Go to playlist radio</li>
+                    <li class="playlist-options-item js-no-supported">Add to Your library</li>
+                    <li class="playlist-options-item playlist-options-item--more-options js-no-supported">
+                        <span>Share</span>
+                        <svg role="img" height="16" width="16" fill="var(--white-color)" style="transform: rotate(
+                            90deg);" viewBox="0 0 16 16">
+                            <path d="M13 10L8 4.206 3 10z"></path>
+                        </svg>
+
+                        <ul class="playlist-more-options-list">
+                            <li class="playlist-more-options-item">Copy link to playlist</li>
+                            <li class="playlist-more-options-item">Embed playlist</li>
+                        </ul>
+                    </li>
+                    <li class="playlist-options-item js-no-supported">About recommendations</li>
+                    <li class="playlist-options-item js-no-supported">Open in Desktop app</li>
+                </ul>
+            </div>
+
+            <!-- Advertisement -->
+            <div class="playlist__advertisement">
+                <h1>PRESENTED BY FORD EVEREST</h1>
+                <img src="../assets/image/hot-hits-vietnam-playlist/advertisement.png" alt="">
+            </div>
+
+            <!-- Songs -->
+            <div class="songs-wrapper">
+                <div class="songs-des" style="z-index: 1; position: relative;">
+                    <div>
+                        <h1 class="songs-des-text" style="font-size: 1.6rem;">#</h1>
+                    </div>
+                    <div>
+                        <h1 class="songs-des-text">TITLE</h1>
+                    </div>
+                    <div>
+                        <h1 class="songs-des-text">ALBUM</h1>
+                    </div>
+                    <div>
+                        <h1 class="songs-des-text">DATE ADDED</h1>
+                    </div>
+                    <div style="justify-content: flex-end; padding-right: 48px;">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="#b3b3b3">
+                            <path
+                                d="M7.999 3h-1v5h3V7h-2V3zM7.5 0a7.5 7.5 0 100 15 7.5 7.5 0 000-15zm0 14C3.916 14 1 11.084 1 7.5S3.916 1 7.5 1 14 3.916 14 7.5 11.084 14 7.5 14z">
+                            </path>
+                            <path fill="none" d="M16 0v16H0V0z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Songs List -->
+                <div class="songs-list">
+
+                </div>
+
+                <!-- Audio -->
+                <audio src="" id="audio" preload="metadata"></audio>
+
+            </div>
+        </div>
+
+        <!-- Play Songs Control -->
+        <div class="player">
+            <div class="player-song-info">
+                <img src="/assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg" alt="changes"
+                    class="player-song-thumb">
+                <div class="player-song-content">
+                    <h1 class="player-song-name">
+                        <a href="#" class="js-non-updated-info">changes</a>
+                    </h1>
+                    <h2 class="player-song-author">
+                        <a href="#" class="js-non-updated-info">XXXTENTACION</a>
+                    </h2>
+                </div>
+                <div class="player-song-action">
+                    <div class="song-play-on-tab js-no-supported">
+                        <svg width="16" height="16" class="song-play-on-tab-icon">
+                            <g fill-rule="evenodd" fill="var(--white-color)">
+                                <path
+                                    d="M1 3v9h14V3H1zm0-1h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"
+                                    fill-rule="nonzero"></path>
+                                <path d="M10 8h4v3h-4z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="player-options">
+                <div class="player-mic js-no-supported">
+                    <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
+                        <path
+                            d="M8.5 1A4.505 4.505 0 004 5.5c0 .731.191 1.411.502 2.022L1.99 13.163a1.307 1.307 0 00.541 1.666l.605.349a1.307 1.307 0 001.649-.283L9.009 9.95C11.248 9.692 13 7.807 13 5.5 13 3.019 10.981 1 8.5 1zM4.023 14.245a.307.307 0 01-.388.066l-.605-.349a.309.309 0 01-.128-.393l2.26-5.078A4.476 4.476 0 007.715 9.92l-3.692 4.325zM8.5 9C6.57 9 5 7.43 5 5.5S6.57 2 8.5 2 12 3.57 12 5.5 10.429 9 8.5 9z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="player-queue js-no-supported">
+                    <svg role="img" height="16" width="16" viewBox="0 0 16 16" fill="var(--white-color)">
+                        <path d="M2 2v5l4.33-2.5L2 2zm0 12h14v-1H2v1zm0-4h14V9H2v1zm7-5v1h7V5H9z"></path>
+                    </svg>
+                </div>
+                <div class="player-connect js-no-supported">
+                    <svg role="img" height="16" width="16" aria-label="Connect to a device" viewBox="0 0 16 16"
+                        fill="var(--white-color)">
+                        <path
+                            d="M0 3v8c0 .55.45 1 1 1h5v-1H1V3h5V2H1c-.55 0-1 .45-1 1zm3 11.5c0 .275.225.5.5.5H6v-1H3.5c-.275 0-.5.225-.5.5zM15 2H9c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H9V3h6v11zm-3-8a.75.75 0 100-1.5.75.75 0 000 1.5zm0 6a2 2 0 100-4 2 2 0 000 4zm0-3c.551 0 1 .449 1 1s-.449 1-1 1-1-.449-1-1 .449-1 1-1z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="player-volume-option">
+                    <div class="player-volume max">
+                        <svg role="presentation" height="16" width="16" fill="var(--white-color)"
+                            aria-label="Volume high" id="volume-icon" viewBox="0 0 16 16"
+                            class="player-volume-max-icon">
+                            <path
+                                d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                            </path>
+                        </svg>
+                        <svg role="presentation" height="16" width="16" fill="var(--white-color)"
+                            aria-label="Volume medium" id="volume-icon" viewBox="0 0 16 16"
+                            class="player-volume-middle-icon">
+                            <path
+                                d="M0 11.032v-6h2.802l5.198-3v12l-5.198-3H0zm7 1.27v-8.54l-3.929 2.27H1v4h2.071L7 12.302zm4.464-2.314q.401-.925.401-1.956 0-1.032-.4-1.957-.402-.924-1.124-1.623L11 3.69q.873.834 1.369 1.957.496 1.123.496 2.385 0 1.262-.496 2.385-.496 1.123-1.369 1.956l-.659-.762q.722-.698 1.123-1.623z">
+                            </path>
+                        </svg>
+                        <svg role="presentation" height="16" width="16" fill="var(--white-color)"
+                            aria-label="Volume off" id="volume-icon" viewBox="0 0 16 16" class="player-volume-non-icon">
+                            <path
+                                d="M0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732zm8.623 2.121l-.707-.707-2.147 2.147-2.146-2.147-.707.707L12.062 8l-2.146 2.146.707.707 2.146-2.147 2.147 2.147.707-.707L13.477 8l2.146-2.147z">
+                            </path>
+                        </svg>
+                    </div>
+                    <input type="range" name="" id="" class="player-volume-range" value="1" step="0.05" min="0" max="1">
+                </div>
+            </div>
+
+            <!-- Player Control -->
+            <div class="player-control">
+                <div class="player-control-wrapper">
+                    <div class="player-shuffle js-audio-shuffle">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-shuffle-icon">
+                            <path
+                                d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="player-previous js-audio-previous">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-previous-icon">
+                            <path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path>
+                        </svg>
+                    </div>
+                    <div class="player-play js-audio-play-btn">
+                        <button class="play-btn flex-center player-play-icon-wrapper">
+                            <svg class="song-play-icon" height="16" role="img" width="16" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="var(--black-color)">
+                                </polygon>
+                            </svg>
+                            <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="song-pause-icon">
+                                <path fill="none" d="M0 0h16v16H0z"></path>
+                                <path d="M3 2h3v12H3zm7 0h3v12h-3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="player-next js-audio-next">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-next-icon">
+                            <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path>
+                        </svg>
+                    </div>
+                    <div class="player-repeat js-audio-repeat">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="player-repeat-icon">
+                            <path
+                                d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="player-time-control">
+                    <span class="song-currenttime js-song-currenttime">00:00</span>
+                    <input type="range" id="js-song-range" class="player-time-range" value="0" step="1" min="0"
+                        max="100">
+                    <span class="song-duration js-song-duration">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="like-notifications-wrapper">
+    </div>
+    <div id="toast">
+    </div>
+    <!-- Javascript -->
+    <img src="" alt="">
+    <script type="module" src="/javascript/playlist/playlist.js"></script>
+    <script>
+        const date = 'Dec 1, 2020';
+        const songs = [
+            {
+                name: 'LẦN CUỐI (đi bên em xót xa người ơi)',
+                singer: 'Ngọt',
+                album: 'LẦN CUỐI (đi bên em xót xa người ơi)',
+                path: '/assets/audio/indie-viet/lan_cuoi_di_ben_em_xot_xa_nguoi_oi_oA4gCHMByoK-gucZuCrQ.mp3',
+                image: '/assets/image/indie-viet-playlist/lan-cuoi.jpeg',
+                render: '3:41'
+            },
+            {
+                name: 'Mascara',
+                singer: 'Chilles',
+                album: 'Mascara',
+                path: '/assets/audio/indie-viet/lyric_video_mascara_chillies_-4653213821462310249.mp3',
+                image: '/assets/image/indie-viet-playlist/mascara.jpeg',
+                render: '4:55'
+            },
+            {
+                name: 'Phố Không Em',
+                singer: 'Thái Đinh',
+                album: 'Phố Không Em',
+                path: '/assets/audio/indie-viet/pho_khong_em_thai_dinh_official_audio_2016_667914895094026237.mp3',
+                image: '/assets/image/indie-viet-playlist/pho-khong-em.jpeg',
+                render: '4:46'
+            },
+            {
+                name: 'Tình Đắng Như Ly Cà Phê',
+                singer: 'nân',
+                singer2: 'Ngơ',
+                album: 'Tình Đắng Như Ly Cà Phê',
+                path: '/assets/audio/indie-viet/nan_x_ngo_tinh_dang_nhu_ly_ca_phe_tas_release_-7376379365043872923.mp3',
+                image: '/assets/image/indie-viet-playlist/tinh-dang-nhu-ly-ca-phe.jpeg',
+                render: '3:35'
+            },
+            {
+                name: 'Đông Kiếm Em',
+                singer: 'Vũ.',
+                album: 'Đông Kiếm Em',
+                path: '/assets/audio/indie-viet/dong_kiem_em_vu_original_4728752989484338182.mp3',
+                image: '/assets/image/indie-viet-playlist/dong-kiem-em.jpeg',
+                render: '4:06'
+            },
+            {
+                name: 'Em Có Nghe (Freak D Lofi Ver.)',
+                singer: 'Kha',
+                album: 'Em Có Nghe',
+                path: '/assets/audio/indie-viet/em_co_nghe_lofi_version_kha_x_freak_d_224908208350785299.mp3',
+                image: '/assets/image/indie-viet-playlist/em-co-nghe.jpeg',
+                render: '3:30'
+            },
+            {
+                name: 'Đường Một Chiều',
+                singer: 'Huỳnh Tú',
+                singer2: 'Magazine',
+                album: 'Đường Một Chiều',
+                path: '/assets/audio/indie-viet/duong_mot_chieu_huynh_tu_ft_magazine_official_music_video_-5067942832628006534.mp3',
+                image: '/assets/image/indie-viet-playlist/duong-1-chieu.jpeg',
+                render: '4:49'
+            },
+            {
+                name: 'Happy For You (feat. Vũ.)',
+                singer: 'Lukas Graham',
+                singer2: 'Vũ.',
+                album: 'Happy For You',
+                path: '/assets/audio/indie-viet/lukas_graham_happy_for_you_feat_vu_performance_video_6462074145644287853.mp3',
+                image: '/assets/image/indie-viet-playlist/happy-for-you.webp',
+                render: '3:47'
+            },
+            {
+                name: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
+                singer: 'Thành Đồng',
+                singer2: 'Đen',
+                singer3: 'Vũ.',
+                album: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
+                path: '/assets/audio/indie-viet/engsub_lyrics_anh_dech_can_gi_nhieu_ngoai_em_den_ft_vu_thanh_dong_1780326686117406313.mp3',
+                image: '/assets/image/indie-viet-playlist/anh-dech-....jpeg',
+                render: '3:33'
+            },
+        ]
+    </script>
 </body>
 
 </html>

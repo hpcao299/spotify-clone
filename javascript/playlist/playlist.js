@@ -8,7 +8,8 @@ import {
     headerPlayBtn,
     headerPlaylistName,
     playlistLikeBtn,
-    songLikeBtns
+    contentBackgroundColor,
+    contentBackgroundImage
 } from '../constants.js';
 
 import {
@@ -32,7 +33,7 @@ function start() {
     audioEvents(songs);
 
     // Header Scroll Events
-    headerScroll(headerElement, headerPlayBtn, headerPlaylistName);
+    headerScroll(headerElement, headerPlayBtn, headerPlaylistName, contentBackgroundImage, contentBackgroundColor);
 
     // Non Supported Message
     nonSupportedElements.forEach((element) => {
