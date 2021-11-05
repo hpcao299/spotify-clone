@@ -7,7 +7,9 @@
     background-color: #0A101D;
     transition: all linear 0.25s;
 }
-
+.header__nav{
+    padding: 13px 32px 8px;
+}
 /* Header Search */
 .header__search{
     flex: 1;

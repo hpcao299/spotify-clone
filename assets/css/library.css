@@ -1,0 +1,215 @@
+#content{
+    min-height: calc(100vh - var(--header-height));
+    padding-bottom: 0;
+}
+
+/* Header Collection */
+.header__nav{
+    padding: 10px 32px;
+}
+.header__collection{
+    flex: 1;
+    display: flex;
+}
+.header__collection-list{
+    padding: 0 0 0 20px;
+    display: flex;
+    margin: 0;
+}
+.header__collection-item{
+    list-style: none;
+}
+.header__collection-link{
+    text-decoration: none;
+    color: var(--white-color);
+    display: block;
+    padding: 15px 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.header__collection-link.active{
+    background-color: #333333;
+}
+
+/* Content Wrapper */
+.content__wrapper{
+    padding: 0 32px 0 32px;
+}
+.content__heading{
+    margin: 16px 0;
+    line-height: 100%;
+    color: var(--white-color);
+    font-size: 2.2rem;
+}
+
+/* Playlists */
+.artists__content,
+.podcasts__content,
+.playlists__content{
+    display: none;
+    gap: 28px;
+}
+.playlists__content.active,
+.podcasts__content.active,
+.artists__content.active,
+.albums__content.active{
+    display: flex;
+}
+.podcasts__main-box,
+.playlists__main-box{
+    width: 439.59px;
+    height: 285.95px;
+    position: relative;
+    background: linear-gradient(149.46deg,#450af5,#8e8ee5 99.16%);
+    cursor: pointer;
+    user-select: none;
+}
+.podcasts__main-box-content,
+.playlists__main-box-content{
+    position: absolute;
+    bottom: 23px;
+    left: 25px;
+    color: var(--white-color);
+    user-select: none;
+}
+.podcasts__main-box-content h1,
+.playlists__main-box-content h1{
+    margin: 0;
+    line-height: 100%;
+    font-size: 2.8rem;
+}
+.podcasts__main-box-content h2,
+.playlists__main-box-content h2{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+.artists__box-play-btn-wrapper,
+.podcasts__main-box-btn-wrapper,
+.platlists__box-play-btn-wrapper,
+.playlists__main-box-btn-wrapper{
+    position: absolute;
+    bottom: 20px;
+    transition: all .3s ease;
+    right: 20px;
+    transform: translateY(8px);
+    opacity: 0;
+}
+.artists__box:hover .artists__box-play-btn-wrapper,
+.podcasts__main-box:hover .podcasts__main-box-btn-wrapper,
+.playlists__box:hover .platlists__box-play-btn-wrapper,
+.playlists__main-box:hover .playlists__main-box-btn-wrapper{
+    transform: translateY(0);
+    opacity: 1;
+}
+.podcasts__main-box-btn,
+.playlists__main-box-btn{
+    width: 48px;
+    height: 48px;
+}
+.artists__box,
+.podcasts__box,
+.playlists__box{
+    max-width: 207.8px;
+    transition: background linear 0.2s;
+    cursor: pointer;
+    user-select: none;
+}
+.artists__box:hover,
+.podcasts__box:hover,
+.playlists__box:hover{
+    background-color: #242424;
+}
+.artists__box-link,
+.podcasts__box-link,
+.playlists__box-link{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.artists__box-img-wrapper,
+.podcasts__box-img-wrapper,
+.playlists__box-img-wrapper{
+    position: relative;
+}
+.artists__img,
+.podcasts__img,
+.playlists__img{
+    width: 175.8px;
+    height: 175.8px;
+    margin: 16px;
+}
+.artists__img{
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+}
+.podcasts__img{
+    border-radius: 12px;
+}
+.platlists__box-play-btn-wrapper{
+    bottom: 24px;
+    right: 24px;
+}
+.artists__name,
+.podcasts__name,
+.playlists__name{
+    font-size: 1.6rem;
+    margin: 8px 16px 0;
+    font-weight: 500;
+    height: 16px;
+    line-height: 0.8;
+}
+.artists__des,
+.podcasts__des,
+.playlists__des{
+    color: rgb(179, 179, 179);
+    height: 32.5px;
+    margin: 9px 16px 16px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.24;
+}
+
+/* Albums */
+.albums__content{
+    height: calc(100vh - var(--header-height));
+    width: calc(100vh - var(sidebar-width));
+    display: none;
+}
+.albums__content-text{
+    text-align: center;
+    color: var(--white-color);
+    margin: auto;
+    padding-bottom: 6px;
+}
+.albums__content-text h1{
+    line-height: 100%;
+    font-size: 3rem;
+    margin: 20px 0 10px;
+}
+.albums__content-text h2{
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    font-size: 1.4rem;
+    margin: 0px 0 32px;
+    font-weight: 400;
+}
+.albums__btn{
+    border: none;
+    outline: none;
+    padding: 8px 34px;
+    background-color: var(--white-color);
+    color: #181818;
+    border-radius: 500px;
+    min-width: 172px;
+    min-height: 38px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1.76px;
+    text-align: center;
+}

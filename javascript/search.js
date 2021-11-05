@@ -10,8 +10,18 @@ const userElement = document.querySelector('.js-user-btn');
 
 import {
     showNonUpdatedSearchFeature,
-    showNonUpdatedGenres
+    showNonUpdatedGenres,
+    showNonSupportedMessage
 } from './toast.js';
+
+import {
+    nonSupportedElements
+} from './constants.js';
+
+
+console.log('%cLuôn mỉm cười dù thế nào nhé! 😁', 'color: #1BB954; font-size: 15px');
+console.log('%cAlways be happy with your life! 😁', 'color: #1BB954; font-size: 15px');
+
 
 document.onscroll = function () {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -97,5 +107,11 @@ searchClearBtn.onclick = function () {
 nonUpdatedGenres.forEach(function (genre) {
     genre.onclick = function () {
         showNonUpdatedGenres();
+    }
+})
+
+nonSupportedElements.forEach(function (element) {
+    element.onclick = function () {
+        showNonSupportedMessage();
     }
 })

@@ -19,9 +19,6 @@ export default function audioEvents() {
     // Repeat Audio When Click Next / Previous Button
     repeatForNextPreviousBtn(previousBtn, nextBtn);
 
-    // Get Audio Current Time and Duration & Render
-    renderDuration();
-
     // Next / Previous 15s Click Btn Events
     nextPrevious15sEvents();
 
@@ -74,15 +71,6 @@ function repeatForNextPreviousBtn(previousBtn, nextBtn) {
     }
 }
 
-// Get Audio  Duration & Render
-function renderDuration() {
-    var audioDurationMinutes = (audio.duration / 60);
-    audioDuration.querySelector('.audio-duration-minutes').innerText = Math.floor(audioDurationMinutes);
-
-    var audioDurationSeconds = (audioDurationMinutes + "").split(".")[1];
-    audioDuration.querySelector('.audio-duration-seconds').innerText = audioDurationSeconds.slice(0, 2);
-}
-
 // Get Audio Current Time & Render
 function renderCurrTime() {
     audio.addEventListener('timeupdate', (event) => {
@@ -95,7 +83,6 @@ function renderCurrTime() {
         sec = Math.floor(sec % 60);
         sec = sec >= 10 ? sec : '0' + sec;
 
-        console.log(`${min}:${sec}`);
         audioCurrentTime.innerText = `${min}:${sec}`;
     })
 }

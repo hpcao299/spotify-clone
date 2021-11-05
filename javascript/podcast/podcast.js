@@ -2,7 +2,7 @@ import {
     playlistDescriptionOpenOptions,
     headerScroll,
     clickOpenEvents,
-    preventNormalSpaceEvent
+    preventNormalSpaceEvent,
 } from './podcast-simpleevents.js';
 
 import {
