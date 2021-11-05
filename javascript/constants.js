@@ -43,6 +43,9 @@ export const playlistDescription = $('.js-playlist-description');
 export const seeMoreBtn = $('.js-description-see-more');
 export const showLessBtn = $('.js-description-show-less');
 
+// Song Des Element
+export const songDesElement = $('.songs-des');
+
 // //////////////////////////////////////////////////////////////////////////////////
 
 // Audio Elements

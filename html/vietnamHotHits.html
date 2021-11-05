@@ -142,11 +142,12 @@
         <div id="content">
             <!-- Content Header -->
             <div class="content__gradient js-background-image" style="background-image: url(../assets/image/hot-hits-vietnam-playlist/background-img.jpeg); background-position: 50% 15%;
-                background-repeat: no-repeat; position: fixed; top: 0; left: 0; right: 0;
+                background-repeat: no-repeat; position: fixed; top: 0; right: -8px; left: var(--sidebar-width);
                 background-size: cover; transform: scale(1.1); opacity: 0.7;">
             </div>
             <div class="content__gradient-bonus-2 js-background-color"
-                style="background-color: #511336; background-image: none; opacity: 0;"></div>
+                style="background-color: #511336; background-image: none; opacity: 0;">
+            </div>
             <div class="content__gradient-bonus" style="background-color: rgb(200, 48, 136);"></div>
             <header class="content__header" style="background-color: #501536;"></header>
             <nav class="header__nav">
@@ -247,7 +248,7 @@
 
             <!-- Playlist Options -->
             <div class="playlist-options-wrapper js-playlist-options-wrapper">
-                <div class="playlist__option">
+                <div class="playlist__option" style="margin-top: 4px;">
                     <button class="play-btn flex-center playlist__play-btn js-audio-play-btn">
                         <svg class="song-play-icon" height="28" role="img" width="28" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -313,7 +314,7 @@
 
             <!-- Songs -->
             <div class="songs-wrapper">
-                <div class="songs-des" style="z-index: 1; position: relative;">
+                <div class="songs-des" style="z-index: 1;">
                     <div>
                         <h1 class="songs-des-text" style="font-size: 1.6rem;">#</h1>
                     </div>
@@ -477,92 +478,121 @@
     <div id="toast">
     </div>
     <!-- Javascript -->
-    <img src="" alt="">
     <script type="module" src="/javascript/playlist/playlist.js"></script>
     <script>
-        const date = 'Dec 1, 2020';
+        const date = '2 days ago';
         const songs = [
             {
-                name: 'LẦN CUỐI (đi bên em xót xa người ơi)',
-                singer: 'Ngọt',
-                album: 'LẦN CUỐI (đi bên em xót xa người ơi)',
-                path: '/assets/audio/indie-viet/lan_cuoi_di_ben_em_xot_xa_nguoi_oi_oA4gCHMByoK-gucZuCrQ.mp3',
-                image: '/assets/image/indie-viet-playlist/lan-cuoi.jpeg',
-                render: '3:41'
-            },
-            {
-                name: 'Mascara',
+                name: 'Cứ Chill Thôi',
                 singer: 'Chilles',
-                album: 'Mascara',
-                path: '/assets/audio/indie-viet/lyric_video_mascara_chillies_-4653213821462310249.mp3',
-                image: '/assets/image/indie-viet-playlist/mascara.jpeg',
-                render: '4:55'
+                singer2: 'Suni Hạ Linh',
+                singer3: 'Rhymastic',
+                album: 'Cứ Chill Thôi',
+                path: '/assets/audio/hot-hits-vietnam/cu_chill_thoi_chillies_rhymastic_suni_ha_linh_lyrics_-1865638455438027355.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/cu-chill-thoi.jpeg',
+                render: '4:26'
             },
             {
-                name: 'Phố Không Em',
-                singer: 'Thái Đinh',
-                album: 'Phố Không Em',
-                path: '/assets/audio/indie-viet/pho_khong_em_thai_dinh_official_audio_2016_667914895094026237.mp3',
-                image: '/assets/image/indie-viet-playlist/pho-khong-em.jpeg',
-                render: '4:46'
+                name: 'Lỡ Say Bye Là Bye',
+                singer: 'Changg',
+                singer2: 'Lemese',
+                album: 'Lỡ Say Bye Là Bye',
+                path: '/assets/audio/hot-hits-vietnam/lyrics_lo_say_bye_la_bye_lemese_feat_changg_2495549875636340192.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/lo-say-bye-la-bye.jpeg',
+                render: '3:36'
             },
             {
-                name: 'Tình Đắng Như Ly Cà Phê',
-                singer: 'nân',
-                singer2: 'Ngơ',
-                album: 'Tình Đắng Như Ly Cà Phê',
-                path: '/assets/audio/indie-viet/nan_x_ngo_tinh_dang_nhu_ly_ca_phe_tas_release_-7376379365043872923.mp3',
-                image: '/assets/image/indie-viet-playlist/tinh-dang-nhu-ly-ca-phe.jpeg',
-                render: '3:35'
+                name: 'Peaches (feat. Daniel Caesar & Giveon)',
+                singer: 'Justin Bieber',
+                singer2: 'Daniel Caesar',
+                singer3: 'Giveon',
+                album: 'Justice',
+                path: '/assets/audio/hot-hits-vietnam/justin_bieber_peaches_ft_daniel_caesar_giveon_3787244009649154690.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/peaches.jpeg',
+                render: '3:18'
             },
             {
-                name: 'Đông Kiếm Em',
-                singer: 'Vũ.',
-                album: 'Đông Kiếm Em',
-                path: '/assets/audio/indie-viet/dong_kiem_em_vu_original_4728752989484338182.mp3',
-                image: '/assets/image/indie-viet-playlist/dong-kiem-em.jpeg',
-                render: '4:06'
+                name: 'Gác Lại Âu Lo (feat. Miu Lê)',
+                singer: 'Da LAB',
+                singer2: 'Miu Lê',
+                album: 'Gác Lại Âu Lo',
+                path: '/assets/audio/hot-hits-vietnam/gac_lai_au_lo_da_lab_ft_miu_le_lyrics_video_-6071518602292407991.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/gac-lai-au-lo.jpeg',
+                render: '4:31'
             },
             {
-                name: 'Em Có Nghe (Freak D Lofi Ver.)',
-                singer: 'Kha',
-                album: 'Em Có Nghe',
-                path: '/assets/audio/indie-viet/em_co_nghe_lofi_version_kha_x_freak_d_224908208350785299.mp3',
-                image: '/assets/image/indie-viet-playlist/em-co-nghe.jpeg',
-                render: '3:30'
+                name: 'Trên Tình Bạn Dưới Tình Yêu',
+                singer: 'MIN',
+                album: 'Trên Tình Bạn Dưới Tình Yêu',
+                path: '/assets/audio/hot-hits-vietnam/min_tren_tinh_ban_duoi_tinh_yeu_lyrics_-3322244804193617680.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/tren-tinh-ban-duoi-tinh-yeu.jpeg',
+                render: '3:18'
             },
             {
-                name: 'Đường Một Chiều',
-                singer: 'Huỳnh Tú',
-                singer2: 'Magazine',
-                album: 'Đường Một Chiều',
-                path: '/assets/audio/indie-viet/duong_mot_chieu_huynh_tu_ft_magazine_official_music_video_-5067942832628006534.mp3',
-                image: '/assets/image/indie-viet-playlist/duong-1-chieu.jpeg',
-                render: '4:49'
+                name: 'Muộn Rồi Mà Sao Còn',
+                singer: 'Sơn Tùng M-TP',
+                album: 'Muộn Rồi Mà Sao Còn',
+                path: '/assets/audio/hot-hits-vietnam/muon_roi_ma_sao_con_lyrics_son_tung_m_tp_8548448633803851308.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/muon-roi-ma-sao-con.jpeg',
+                render: '4:54'
             },
             {
-                name: 'Happy For You (feat. Vũ.)',
-                singer: 'Lukas Graham',
-                singer2: 'Vũ.',
-                album: 'Happy For You',
-                path: '/assets/audio/indie-viet/lukas_graham_happy_for_you_feat_vu_performance_video_6462074145644287853.mp3',
-                image: '/assets/image/indie-viet-playlist/happy-for-you.webp',
-                render: '3:47'
+                name: 'Thích Quá Rùi Nà',
+                singer: 'Tlinh',
+                singer2: 'Trung Trần',
+                album: 'Thích Quá Rùi Nà',
+                path: '/assets/audio/hot-hits-vietnam/thich_qua_rui_na_tlinh_feat_trung_tran_prod_by_pacman_official_lyrics_video_4126606862410957147.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/tu-thich-thanh-thuong.jpeg',
+                render: '2:57'
             },
             {
-                name: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
-                singer: 'Thành Đồng',
-                singer2: 'Đen',
-                singer3: 'Vũ.',
-                album: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
-                path: '/assets/audio/indie-viet/engsub_lyrics_anh_dech_can_gi_nhieu_ngoai_em_den_ft_vu_thanh_dong_1780326686117406313.mp3',
-                image: '/assets/image/indie-viet-playlist/anh-dech-....jpeg',
-                render: '3:33'
+                name: 'Tháng Năm',
+                singer: 'Soobin Hoang Son',
+                album: 'The Playah',
+                path: '/assets/audio/hot-hits-vietnam/soobin_thang_nam_official_music_video_-5943766603685119921.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/thang-na,.jpeg',
+                render: '3:56'
+            },
+            {
+                name: 'Sài Gòn Đau Lòng Quá',
+                singer: 'Hứa Kim Tuyền',
+                singer2: 'Hoàng Duyên',
+                album: 'Sài Gòn Đau Lòng Quá',
+                path: '/assets/audio/hot-hits-vietnam/lyrics_sai_gon_dau_long_qua_hua_kim_tuyen_x_hoang_duyen_184096994745484121.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/sai-gon-dau-long-qua.jpeg',
+                render: '5:05'
+            },
+            {
+                name: 'Trốn Tìm',
+                singer: 'Đen',
+                singer2: 'MTV Band',
+                album: 'Trốn Tìm',
+                path: '/assets/audio/hot-hits-vietnam/tron_tim_den_vau_ft_mtv_band_audio_lyrics_video_202731645685702273.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/tron-tim.jpeg',
+                render: '4:09'
+            },
+            {
+                name: 'Chuyện Rằng',
+                singer: 'Thịnh Suy',
+                album: 'Chuyện Rằng',
+                path: '/assets/audio/hot-hits-vietnam/thinh_suy_chuyen_rang_official_music_video_-7032767316958166706.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/chuyen-rang.jpeg',
+                render: '4:36'
+            },
+            {
+                name: 'từ thích thích thành thương thương',
+                singer: 'AMEE',
+                singer2: 'Hoang Dung',
+                album: 'dreAMEE (acoustic)',
+                path: '/assets/audio/hot-hits-vietnam/tu_thich_thich_thanh_thuong_thuong_amee_hoang_dung_official_lyric_video_-5008986664838868177.mp3',
+                image: '/assets/image/hot-hits-vietnam-playlist/tu-thich-thanh-thuong.jpeg',
+                render: '3:21'
             },
         ]
-        console.log('%cBạn sẽ thành công thôi, cố lên! 👊', 'color: #1BB954; font-size: 15px');
-        console.log('%cYou will be successful soon, keep it up! 👊', 'color: #1BB954; font-size: 15px');
+        // console.log('%cBạn sẽ thành công thôi, cố lên! 👊', 'color: #1BB954; font-size: 15px');
+        // console.log('%cYou will be successful soon, keep it up! 👊', 'color: #1BB954; font-size: 15px');
     </script>
+
 </body>
 
 </html>

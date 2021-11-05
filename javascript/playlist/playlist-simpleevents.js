@@ -33,7 +33,8 @@ export function clickOpenEvents(userElement, playlistElement, songElement) {
 }
 
 // Header Scroll Events
-export function headerScroll(header, headerPlayBtn, headerPlaylistName, contentBackgroundImage, contentBackgroundColor) {
+export function headerScroll(header, headerPlayBtn, headerPlaylistName, contentBackgroundImage, contentBackgroundColor, songDes) {
+    const distance = songDes ? songDes.offsetTop - 72 : null;
     document.onscroll = function () {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -56,7 +57,24 @@ export function headerScroll(header, headerPlayBtn, headerPlaylistName, contentB
         }
 
         if (contentBackgroundImage && contentBackgroundColor) {
+            const scale = 1.1 - (scrollTop / 6050);
+            contentBackgroundImage.style.transform = `scale(${scale})`;
+            contentBackgroundColor.style.opacity = scrollTop / 130;
+            if (scrollTop >= 125) {
+                contentBackgroundImage.style.opacity = 0;
+            } else {
+                contentBackgroundImage.style.opacity = 0.7;
+            }
+        }
 
+        if (songDes) {
+            if (scrollTop >= distance) {
+                songDes.classList.add('fixed');
+                document.querySelector('.songs-list').classList.add('margin');
+            } else {
+                songDes.classList.remove('fixed');
+                document.querySelector('.songs-list').classList.remove('margin');
+            }
         }
     }
 }
