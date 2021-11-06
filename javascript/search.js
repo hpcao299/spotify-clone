@@ -19,8 +19,9 @@ import {
 } from './constants.js';
 
 
-console.log('%cLuôn mỉm cười dù thế nào nhé! 😁', 'color: #1BB954; font-size: 15px');
-console.log('%cAlways be happy with your life! 😁', 'color: #1BB954; font-size: 15px');
+// Console
+console.log('%cChúc bạn một ngày tốt lành 😊', 'color: #1BB954; font-size: 15px');
+console.log('%cHave a nice day 😊', 'color: #1BB954; font-size: 15px');
 
 
 document.onscroll = function () {

@@ -5,7 +5,9 @@ const podcastLink = document.querySelector('.podcast__link');
 const artistLink = document.querySelector('.artist__link');
 const albumLink = document.querySelector('.album__link');
 
-console.log('%cCó một ngày tốt lành bạn nhé. 😊', 'color: #1BB954; font-size: 15px');
+
+// Console
+console.log('%cChúc bạn một ngày tốt lành 😊', 'color: #1BB954; font-size: 15px');
 console.log('%cHave a nice day 😊', 'color: #1BB954; font-size: 15px');
 
 import {

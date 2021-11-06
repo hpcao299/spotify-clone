@@ -54,5 +54,9 @@ function start() {
 
     // Prevent Default Event Of Spacebar
     preventNormalSpaceEvent();
+
+    // Console
+    console.log('%cChúc bạn một ngày tốt lành 😊', 'color: #1BB954; font-size: 15px');
+    console.log('%cHave a nice day 😊', 'color: #1BB954; font-size: 15px');
 }
 start();
