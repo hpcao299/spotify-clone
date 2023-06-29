@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Indie Việt 2020</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/music-playlist.css">
-    <link rel="stylesheet" href="/assets/fonts/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/image/Logo.svg">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/music-playlist.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/image/Logo.svg">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="sidebar__item js-no-supported">
-                    <a href="/html/search.html" class="sidebar__item-link">
+                    <a href="./search.html" class="sidebar__item-link">
                         <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
                             <path
                                 d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z">
@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li class="sidebar__item js-no-supported">
-                    <a href="/html/library.html" class="sidebar__item-link">
+                    <a href="./library.html" class="sidebar__item-link">
                         <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
                             <path
                                 d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z">
@@ -91,7 +91,7 @@
 
             <ul class="sidebar__playlist-list">
                 <li class="sidebar__playlist-item">
-                    <a href="/html/xxxtentacion.html" class="sidebar__playlist-link word-1-line">
+                    <a href="./xxxtentacion.html" class="sidebar__playlist-link word-1-line">
                         <span>This Is XXXTENTACION</span>
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
                             fill="#B3B3B3">
@@ -113,7 +113,7 @@
                     </a>
                 </li>
                 <li class="sidebar__playlist-item">
-                    <a href="/html/vietnamHotHits.html" class="sidebar__playlist-link word-1-line">
+                    <a href="./vietnamHotHits.html" class="sidebar__playlist-link word-1-line">
                         <span>Hot Hits Vietnam</span>
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
                             fill="#B3B3B3">
@@ -173,7 +173,7 @@
                     <button type="submit" class="btn header__btn--upgrade"
                         onclick="location.href='https://www.spotify.com/us/premium/'">Upgrade</button>
                     <button class="header__user-btn js-user-btn">
-                        <img src="/assets/image/avatar.jpeg" alt="" class="header__avatar">
+                        <img src="../assets/image/avatar.jpeg" alt="" class="header__avatar">
                         <span class="header__name">phuc.cao2909</span>
                         <div class="header__avatar-wrapper">
                             <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--down"
@@ -227,7 +227,7 @@
 
             <!-- Playlist Info -->
             <div class="playlist__info">
-                <img src="/assets/image/recent-playlist/Indie-Viet-Playlist.jpeg" alt="" class="playlist__thumb">
+                <img src="../assets/image/recent-playlist/Indie-Viet-Playlist.jpeg" alt="" class="playlist__thumb">
                 <div class="playlist__content">
                     <h1 class="playlist__type">Playlist</h1>
                     <h2 class="playlist__name" style="font-size: 9.6rem;">Indie Việt 2020</h2>
@@ -338,7 +338,7 @@
         <!-- Play Songs Control -->
         <div class="player">
             <div class="player-song-info">
-                <img src="/assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg" alt="changes"
+                <img src="../assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg" alt="changes"
                     class="player-song-thumb">
                 <div class="player-song-content">
                     <h1 class="player-song-name">
@@ -465,7 +465,7 @@
     <div id="toast">
     </div>
     <!-- Javascript -->
-    <script type="module" src="/javascript/playlist/playlist.js"></script>
+    <script type="module" src="../javascript/playlist/playlist.js"></script>
     <script>
         const date = 'Dec 1, 2020';
         const songs = [
@@ -474,7 +474,7 @@
                 singer: 'Ngọt',
                 album: 'LẦN CUỐI (đi bên em xót xa người ơi)',
                 path: '/assets/audio/indie-viet/lan_cuoi_di_ben_em_xot_xa_nguoi_oi_oA4gCHMByoK-gucZuCrQ.mp3',
-                image: '/assets/image/indie-viet-playlist/lan-cuoi.jpeg',
+                image: '../assets/image/indie-viet-playlist/lan-cuoi.jpeg',
                 render: '3:41'
             },
             {
@@ -482,7 +482,7 @@
                 singer: 'Chilles',
                 album: 'Mascara',
                 path: '/assets/audio/indie-viet/lyric_video_mascara_chillies_-4653213821462310249.mp3',
-                image: '/assets/image/indie-viet-playlist/mascara.jpeg',
+                image: '../assets/image/indie-viet-playlist/mascara.jpeg',
                 render: '4:55'
             },
             {
@@ -490,7 +490,7 @@
                 singer: 'Thái Đinh',
                 album: 'Phố Không Em',
                 path: '/assets/audio/indie-viet/pho_khong_em_thai_dinh_official_audio_2016_667914895094026237.mp3',
-                image: '/assets/image/indie-viet-playlist/pho-khong-em.jpeg',
+                image: '../assets/image/indie-viet-playlist/pho-khong-em.jpeg',
                 render: '4:46'
             },
             {
@@ -499,7 +499,7 @@
                 singer2: 'Ngơ',
                 album: 'Tình Đắng Như Ly Cà Phê',
                 path: '/assets/audio/indie-viet/nan_x_ngo_tinh_dang_nhu_ly_ca_phe_tas_release_-7376379365043872923.mp3',
-                image: '/assets/image/indie-viet-playlist/tinh-dang-nhu-ly-ca-phe.jpeg',
+                image: '../assets/image/indie-viet-playlist/tinh-dang-nhu-ly-ca-phe.jpeg',
                 render: '3:35'
             },
             {
@@ -507,7 +507,7 @@
                 singer: 'Vũ.',
                 album: 'Đông Kiếm Em',
                 path: '/assets/audio/indie-viet/dong_kiem_em_vu_original_4728752989484338182.mp3',
-                image: '/assets/image/indie-viet-playlist/dong-kiem-em.jpeg',
+                image: '../assets/image/indie-viet-playlist/dong-kiem-em.jpeg',
                 render: '4:06'
             },
             {
@@ -515,7 +515,7 @@
                 singer: 'Kha',
                 album: 'Em Có Nghe',
                 path: '/assets/audio/indie-viet/em_co_nghe_lofi_version_kha_x_freak_d_224908208350785299.mp3',
-                image: '/assets/image/indie-viet-playlist/em-co-nghe.jpeg',
+                image: '../assets/image/indie-viet-playlist/em-co-nghe.jpeg',
                 render: '3:30'
             },
             {
@@ -524,7 +524,7 @@
                 singer2: 'Magazine',
                 album: 'Đường Một Chiều',
                 path: '/assets/audio/indie-viet/duong_mot_chieu_huynh_tu_ft_magazine_official_music_video_-5067942832628006534.mp3',
-                image: '/assets/image/indie-viet-playlist/duong-1-chieu.jpeg',
+                image: '../assets/image/indie-viet-playlist/duong-1-chieu.jpeg',
                 render: '4:49'
             },
             {
@@ -533,7 +533,7 @@
                 singer2: 'Vũ.',
                 album: 'Happy For You',
                 path: '/assets/audio/indie-viet/lukas_graham_happy_for_you_feat_vu_performance_video_6462074145644287853.mp3',
-                image: '/assets/image/indie-viet-playlist/happy-for-you-completed.jpeg',
+                image: '../assets/image/indie-viet-playlist/happy-for-you-completed.jpeg',
                 render: '3:47'
             },
             {
@@ -543,7 +543,7 @@
                 singer3: 'Vũ.',
                 album: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
                 path: '/assets/audio/indie-viet/engsub_lyrics_anh_dech_can_gi_nhieu_ngoai_em_den_ft_vu_thanh_dong_1780326686117406313.mp3',
-                image: '/assets/image/indie-viet-playlist/anh-dech-....jpeg',
+                image: '../assets/image/indie-viet-playlist/anh-dech-....jpeg',
                 render: '3:33'
             },
         ]

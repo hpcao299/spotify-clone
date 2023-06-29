@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Hot Hits Vietnam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/assets/css/grid.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/music-playlist.css">
-    <link rel="stylesheet" href="/assets/fonts/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/image/Logo.svg">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/music-playlist.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/image/Logo.svg">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li class="sidebar__item">
-                    <a href="/html/search.html" class="sidebar__item-link">
+                    <a href="./search.html" class="sidebar__item-link">
                         <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
                             <path
                                 d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z">
@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="sidebar__item">
-                    <a href="/html/library.html" class="sidebar__item-link">
+                    <a href="./library.html" class="sidebar__item-link">
                         <svg role="img" height="24" width="24" class="sidebar__item-link-img" viewBox="0 0 24 24">
                             <path
                                 d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z">
@@ -92,7 +92,7 @@
 
             <ul class="sidebar__playlist-list">
                 <li class="sidebar__playlist-item">
-                    <a href="/html/xxxtentacion.html" class="sidebar__playlist-link word-1-line">
+                    <a href="./xxxtentacion.html" class="sidebar__playlist-link word-1-line">
                         <span>This Is XXXTENTACION</span>
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
                             fill="#B3B3B3">
@@ -103,7 +103,7 @@
                     </a>
                 </li>
                 <li class="sidebar__playlist-item">
-                    <a href="/html/indieViet.html" class="sidebar__playlist-link word-1-line">
+                    <a href="./indieViet.html" class="sidebar__playlist-link word-1-line">
                         <span>Indie Việt 2020</span>
                         <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="sidebar__playlist-link-icon"
                             fill="#B3B3B3">
@@ -180,7 +180,7 @@
                     <button type="submit" class="btn header__btn--upgrade"
                         onclick="location.href='https://www.spotify.com/us/premium/'">Upgrade</button>
                     <button class="header__user-btn js-user-btn">
-                        <img src="/assets/image/avatar.jpeg" alt="" class="header__avatar">
+                        <img src="../assets/image/avatar.jpeg" alt="" class="header__avatar">
                         <span class="header__name">phuc.cao2909</span>
                         <div class="header__avatar-wrapper">
                             <svg role="img" height="16" width="16" class="header__user-icon header__user-icon--down"
@@ -351,7 +351,7 @@
         <!-- Play Songs Control -->
         <div class="player">
             <div class="player-song-info">
-                <img src="/assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg" alt="changes"
+                <img src="../assets/image/xxxtentacion-playlist/newspapers-thumb.jpeg" alt="changes"
                     class="player-song-thumb">
                 <div class="player-song-content">
                     <h1 class="player-song-name">
@@ -478,7 +478,7 @@
     <div id="toast">
     </div>
     <!-- Javascript -->
-    <script type="module" src="/javascript/playlist/playlist.js"></script>
+    <script type="module" src="../javascript/playlist/playlist.js"></script>
     <script>
         const date = '2 days ago';
         const songs = [
@@ -489,7 +489,7 @@
                 singer3: 'Rhymastic',
                 album: 'Cứ Chill Thôi',
                 path: '/assets/audio/hot-hits-vietnam/cu_chill_thoi_chillies_rhymastic_suni_ha_linh_lyrics_-1865638455438027355.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/cu-chill-thoi.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/cu-chill-thoi.jpeg',
                 render: '4:26'
             },
             {
@@ -498,7 +498,7 @@
                 singer2: 'Lemese',
                 album: 'Lỡ Say Bye Là Bye',
                 path: '/assets/audio/hot-hits-vietnam/lyrics_lo_say_bye_la_bye_lemese_feat_changg_2495549875636340192.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/lo-say-bye-la-bye.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/lo-say-bye-la-bye.jpeg',
                 render: '3:36'
             },
             {
@@ -508,7 +508,7 @@
                 singer3: 'Giveon',
                 album: 'Justice',
                 path: '/assets/audio/hot-hits-vietnam/justin_bieber_peaches_ft_daniel_caesar_giveon_3787244009649154690.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/peaches.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/peaches.jpeg',
                 render: '3:18'
             },
             {
@@ -517,7 +517,7 @@
                 singer2: 'Miu Lê',
                 album: 'Gác Lại Âu Lo',
                 path: '/assets/audio/hot-hits-vietnam/gac_lai_au_lo_da_lab_ft_miu_le_lyrics_video_-6071518602292407991.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/gac-lai-au-lo.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/gac-lai-au-lo.jpeg',
                 render: '4:31'
             },
             {
@@ -525,7 +525,7 @@
                 singer: 'MIN',
                 album: 'Trên Tình Bạn Dưới Tình Yêu',
                 path: '/assets/audio/hot-hits-vietnam/min_tren_tinh_ban_duoi_tinh_yeu_lyrics_-3322244804193617680.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/tren-tinh-ban-duoi-tinh-yeu.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/tren-tinh-ban-duoi-tinh-yeu.jpeg',
                 render: '3:18'
             },
             {
@@ -533,7 +533,7 @@
                 singer: 'Sơn Tùng M-TP',
                 album: 'Muộn Rồi Mà Sao Còn',
                 path: '/assets/audio/hot-hits-vietnam/muon_roi_ma_sao_con_lyrics_son_tung_m_tp_8548448633803851308.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/muon-roi-ma-sao-con.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/muon-roi-ma-sao-con.jpeg',
                 render: '4:54'
             },
             {
@@ -542,7 +542,7 @@
                 singer2: 'Trung Trần',
                 album: 'Thích Quá Rùi Nà',
                 path: '/assets/audio/hot-hits-vietnam/thich_qua_rui_na_tlinh_feat_trung_tran_prod_by_pacman_official_lyrics_video_4126606862410957147.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/tu-thich-thanh-thuong.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/tu-thich-thanh-thuong.jpeg',
                 render: '2:57'
             },
             {
@@ -550,7 +550,7 @@
                 singer: 'Soobin Hoang Son',
                 album: 'The Playah',
                 path: '/assets/audio/hot-hits-vietnam/soobin_thang_nam_official_music_video_-5943766603685119921.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/thang-na,.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/thang-na,.jpeg',
                 render: '3:56'
             },
             {
@@ -559,7 +559,7 @@
                 singer2: 'Hoàng Duyên',
                 album: 'Sài Gòn Đau Lòng Quá',
                 path: '/assets/audio/hot-hits-vietnam/lyrics_sai_gon_dau_long_qua_hua_kim_tuyen_x_hoang_duyen_184096994745484121.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/sai-gon-dau-long-qua.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/sai-gon-dau-long-qua.jpeg',
                 render: '5:05'
             },
             {
@@ -568,7 +568,7 @@
                 singer2: 'MTV Band',
                 album: 'Trốn Tìm',
                 path: '/assets/audio/hot-hits-vietnam/tron_tim_den_vau_ft_mtv_band_audio_lyrics_video_202731645685702273.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/tron-tim.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/tron-tim.jpeg',
                 render: '4:09'
             },
             {
@@ -576,7 +576,7 @@
                 singer: 'Thịnh Suy',
                 album: 'Chuyện Rằng',
                 path: '/assets/audio/hot-hits-vietnam/thinh_suy_chuyen_rang_official_music_video_-7032767316958166706.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/chuyen-rang.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/chuyen-rang.jpeg',
                 render: '4:36'
             },
             {
@@ -585,7 +585,7 @@
                 singer2: 'Hoang Dung',
                 album: 'dreAMEE (acoustic)',
                 path: '/assets/audio/hot-hits-vietnam/tu_thich_thich_thanh_thuong_thuong_amee_hoang_dung_official_lyric_video_-5008986664838868177.mp3',
-                image: '/assets/image/hot-hits-vietnam-playlist/tu-thich-thanh-thuong.jpeg',
+                image: '../assets/image/hot-hits-vietnam-playlist/tu-thich-thanh-thuong.jpeg',
                 render: '3:21'
             },
         ]

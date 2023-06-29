@@ -64,7 +64,7 @@ export default function audioEvents(songs) {
                             </svg>
                         </div>
                         <div class="song-play-playing">
-                            <img src="/assets/image/playing.gif" alt="" style="width: 14px; height: 14px;">
+                            <img src="../assets/image/playing.gif" alt="" style="width: 14px; height: 14px;">
                         </div>
                     </div>
                     <div class="song-info">
